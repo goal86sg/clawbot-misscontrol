@@ -9,12 +9,14 @@ import {
   PixelMission,
   PixelTerminal,
   PixelSettings,
+  PixelHeart,
 } from '@/lib/pixel-icons';
 
 const navItems = [
   { href: '/', label: 'Dashboard', icon: PixelHome },
   { href: '/agents', label: 'Agents', icon: PixelAgents },
   { href: '/missions', label: 'Missions', icon: PixelMission },
+  { href: '/vitals', label: 'Vitals', icon: PixelHeart },
   { href: '/terminal', label: 'Terminal', icon: PixelTerminal },
   { href: '/settings', label: 'Settings', icon: PixelSettings },
 ];
