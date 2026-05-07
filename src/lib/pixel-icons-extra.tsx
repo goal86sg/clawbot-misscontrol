@@ -1,0 +1,101 @@
+// New pixel icons for the additional screens
+import React from 'react';
+
+type PixelIconProps = { size?: number; className?: string };
+
+export const PixelTasks: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    <rect x="2" y="2" width="4" height="4" fill="currentColor" />
+    <rect x="7" y="2" width="4" height="4" fill="currentColor" opacity="0.5" />
+    <rect x="12" y="2" width="4" height="4" fill="currentColor" opacity="0.2" />
+    <rect x="2" y="7" width="12" height="1" fill="currentColor" opacity="0.15" />
+    <rect x="2" y="9" width="4" height="4" fill="currentColor" opacity="0.5" />
+    <rect x="7" y="9" width="4" height="4" fill="currentColor" opacity="0.2" />
+  </svg>
+);
+
+export const PixelCalendar: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    <rect x="1" y="2" width="14" height="13" fill="currentColor" opacity="0.1" />
+    <rect x="1" y="2" width="14" height="3" fill="currentColor" />
+    <rect x="3" y="0" width="2" height="5" fill="currentColor" opacity="0.4" />
+    <rect x="11" y="0" width="2" height="5" fill="currentColor" opacity="0.4" />
+    <rect x="3" y="7" width="3" height="2" fill="currentColor" opacity="0.5" />
+    <rect x="7" y="7" width="3" height="2" fill="currentColor" opacity="0.3" />
+    <rect x="11" y="7" width="3" height="2" fill="currentColor" opacity="0.3" />
+    <rect x="3" y="10" width="3" height="2" fill="currentColor" opacity="0.3" />
+  </svg>
+);
+
+export const PixelProjects: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    <rect x="1" y="1" width="6" height="5" fill="currentColor" opacity="0.3" />
+    <rect x="9" y="1" width="6" height="5" fill="currentColor" opacity="0.15" />
+    <rect x="1" y="8" width="4" height="7" fill="currentColor" opacity="0.5" />
+    <rect x="6" y="10" width="4" height="5" fill="currentColor" opacity="0.2" />
+    <rect x="11" y="8" width="4" height="4" fill="currentColor" opacity="0.25" />
+  </svg>
+);
+
+export const PixelMemory: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    <rect x="2" y="1" width="12" height="14" fill="currentColor" opacity="0.1" />
+    <rect x="4" y="2" width="8" height="1" fill="currentColor" opacity="0.3" />
+    <rect x="4" y="4" width="8" height="1" fill="currentColor" opacity="0.3" />
+    <rect x="4" y="6" width="6" height="1" fill="currentColor" opacity="0.2" />
+    <rect x="4" y="8" width="8" height="1" fill="currentColor" opacity="0.2" />
+    <rect x="4" y="10" width="5" height="1" fill="currentColor" opacity="0.15" />
+    <rect x="4" y="12" width="7" height="1" fill="currentColor" opacity="0.15" />
+  </svg>
+);
+
+export const PixelDocs: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    <rect x="3" y="1" width="10" height="14" fill="currentColor" opacity="0.1" />
+    <rect x="1" y="3" width="3" height="10" fill="currentColor" opacity="0.15" />
+    <rect x="4" y="3" width="8" height="3" fill="currentColor" opacity="0.3" />
+    <rect x="4" y="7" width="6" height="2" fill="currentColor" opacity="0.2" />
+    <rect x="4" y="10" width="7" height="2" fill="currentColor" opacity="0.15" />
+  </svg>
+);
+
+export const PixelTeam: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    <rect x="5" y="1" width="6" height="5" fill="currentColor" />
+    <rect x="6" y="0" width="4" height="2" fill="currentColor" />
+    <rect x="1" y="7" width="5" height="5" fill="currentColor" opacity="0.5" />
+    <rect x="10" y="7" width="5" height="5" fill="currentColor" opacity="0.3" />
+    <rect x="5" y="13" width="6" height="1" fill="currentColor" opacity="0.2" />
+  </svg>
+);
+
+export const PixelOffice: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    <rect x="0" y="0" width="16" height="2" fill="currentColor" opacity="0.15" />
+    <rect x="0" y="14" width="16" height="2" fill="currentColor" opacity="0.15" />
+    <rect x="0" y="0" width="2" height="16" fill="currentColor" opacity="0.15" />
+    <rect x="14" y="0" width="2" height="16" fill="currentColor" opacity="0.15" />
+    <rect x="4" y="6" width="3" height="3" fill="currentColor" opacity="0.4" />
+    <rect x="9" y="6" width="3" height="3" fill="currentColor" opacity="0.3" />
+    <rect x="4" y="11" width="3" height="3" fill="currentColor" opacity="0.2" />
+    <rect x="9" y="11" width="3" height="3" fill="currentColor" opacity="0.2" />
+  </svg>
+);
+
+export const PixelSearch: React.FC<PixelIconProps> = ({ size = 16, className }) => (
+  <svg width={size} height={size} viewBox="0 0 8 8" className={className} shapeRendering="crispEdges">
+    <rect x="1" y="1" width="5" height="5" fill="currentColor" opacity="0.2" />
+    <rect x="2" y="2" width="3" height="3" fill="currentColor" opacity="0.5" />
+    <rect x="5" y="5" width="3" height="1" fill="currentColor" />
+    <rect x="7" y="4" width="1" height="3" fill="currentColor" />
+  </svg>
+);
+
+export const PixelPulse: React.FC<PixelIconProps> = ({ size = 16, className }) => (
+  <svg width={size} height={size} viewBox="0 0 8 8" className={className} shapeRendering="crispEdges">
+    <rect x="0" y="3" width="1" height="2" fill="currentColor" />
+    <rect x="2" y="1" width="1" height="6" fill="currentColor" />
+    <rect x="4" y="0" width="1" height="8" fill="currentColor" />
+    <rect x="6" y="2" width="1" height="4" fill="currentColor" />
+  </svg>
+);
