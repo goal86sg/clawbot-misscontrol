@@ -3,28 +3,26 @@
 import React from 'react';
 import { PixelProgress } from '@/components/PixelProgress';
 import { PixelAvatar } from '@/components/PixelAvatar';
-import { PixelCheck, PixelClock, PixelHeart } from '@/lib/pixel-icons';
+import { PixelCheck, PixelClock, PixelHeart, PixelAlert } from '@/lib/pixel-icons';
 import Link from 'next/link';
 
 const stats = [
-  { label: 'Active Agents', value: '8', sub: '/ 12 online', color: 'text-green-600' },
-  { label: 'Missions', value: '24', sub: '3 in progress', color: 'text-blue-600' },
-  { label: 'Success Rate', value: '97.2%', sub: '+2.1% this week', color: 'text-emerald-600' },
+  { label: 'Active Agents', value: '2', sub: '/ 2 registered', color: 'text-green-600' },
+  { label: 'Cron Jobs', value: '3', sub: '1 error · 2 ok', color: 'text-blue-600' },
+  { label: 'Builds Today', value: '1', sub: 'pixfetch v1.0', color: 'text-purple-600' },
   { label: 'Uptime', value: '99.9%', sub: 'Last 30 days', color: 'text-gray-900' },
 ];
 
 const activeAgents = [
-  { name: 'Cyber-7', agent: 'cyber' as const, status: 'active', mission: 'Network Scan', hp: 92 },
-  { name: 'Scout-2', agent: 'scout' as const, status: 'active', mission: 'Recon Delta', hp: 88 },
-  { name: 'Engi-4', agent: 'engineer' as const, status: 'idle', mission: '—', hp: 100 },
-  { name: 'Guard-1', agent: 'guardian' as const, status: 'active', mission: 'Perimeter Watch', hp: 76 },
+  { name: 'Des_bot', id: 'main', type: 'cyber' as const, status: 'active', mission: 'All operations', hp: 100 },
+  { name: 'guarddog', id: 'guarddog', type: 'guardian' as const, status: 'idle', mission: 'Nightly security audit', hp: 100 },
 ];
 
 const missionLog = [
-  { id: 'M-042', title: 'Database Audit', agent: 'Cyber-7', time: '2m ago', status: 'completed' },
-  { id: 'M-041', title: 'API Endpoint Scan', agent: 'Scout-2', time: '8m ago', status: 'completed' },
-  { id: 'M-040', title: 'Config Validation', agent: 'Engi-4', time: '15m ago', status: 'completed' },
-  { id: 'M-039', title: 'Log Analysis', agent: 'Guard-1', time: '23m ago', status: 'failed' },
+  { id: 'cron', title: 'Memory Dreaming Promotion', agent: 'system', time: '18m ago', status: 'ok' },
+  { id: 'cron', title: 'Nightly: pixfetch v1.0 built', agent: 'main', time: '7h ago', status: 'completed' },
+  { id: 'cron', title: 'healthcheck:daily-security-audit', agent: 'guarddog', time: '12h ago', status: 'error' },
+  { id: 'cron', title: 'Nightly: Sovereign Cloud PPTX', agent: 'main', time: '2d ago', status: 'completed' },
 ];
 
 export default function DashboardPage() {
@@ -46,11 +44,9 @@ export default function DashboardPage() {
 
       {/* Stat Cards */}
       <div className="grid grid-cols-4 gap-4">
-        {stats.map((stat) => (
+        {stats.map(stat => (
           <div key={stat.label} className="bg-white border border-gray-200 rounded-lg p-4">
-            <p className="text-[10px] text-gray-400 uppercase tracking-widest font-medium">
-              {stat.label}
-            </p>
+            <p className="text-[10px] text-gray-400 uppercase tracking-widest font-medium">{stat.label}</p>
             <p className={`text-2xl font-bold mt-1 ${stat.color}`}>{stat.value}</p>
             <p className="text-[11px] text-gray-400 mt-0.5">{stat.sub}</p>
           </div>
@@ -61,85 +57,77 @@ export default function DashboardPage() {
       <div className="grid grid-cols-3 gap-4">
         {/* Active Agents */}
         <div className="col-span-2 bg-white border border-gray-200 rounded-lg overflow-hidden">
-          <div
-            className="px-5 py-3 border-b border-gray-100"
-            style={{
-              backgroundImage: 'linear-gradient(90deg, transparent 7px, rgba(0,0,0,0.015) 1px)',
-              backgroundSize: '8px 100%',
-            }}
-          >
+          <div className="px-5 py-3 border-b border-gray-100"
+            style={{ backgroundImage: 'linear-gradient(90deg, transparent 7px, rgba(0,0,0,0.015) 1px)', backgroundSize: '8px 100%' }}>
             <div className="flex items-center justify-between">
-              <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                Active Agents
-              </h2>
-              <Link href="/agents" className="text-[10px] text-blue-500 hover:text-blue-600 font-medium">
-                View all →
-              </Link>
+              <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Active Agents</h2>
+              <Link href="/agents" className="text-[10px] text-blue-500 hover:text-blue-600 font-medium">View all →</Link>
             </div>
           </div>
           <div className="divide-y divide-gray-50">
-            {activeAgents.map((agent) => (
-              <div key={agent.name} className="px-5 py-3 flex items-center gap-4 hover:bg-gray-50/50 transition-colors">
-                <PixelAvatar agent={agent.agent} size={36} />
+            {activeAgents.map(agent => (
+              <div key={agent.id} className="px-5 py-3 flex items-center gap-4">
+                <PixelAvatar agent={agent.type} size={36} />
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2">
-                    <span className="text-sm font-medium text-gray-900">{agent.name}</span>
-                    <span
-                      className={`inline-block w-1.5 h-1.5 rounded-full ${
-                        agent.status === 'active' ? 'bg-green-500' : 'bg-yellow-400'
-                      }`}
-                    />
+                    <p className="text-xs font-semibold text-gray-900">{agent.name}</p>
+                    <span className={`w-1.5 h-1.5 rounded-full ${agent.status === 'active' ? 'bg-green-500 animate-pulse' : 'bg-yellow-500'}`} />
+                    <span className="text-[9px] text-gray-400">{agent.status}</span>
                   </div>
-                  <p className="text-[11px] text-gray-400">{agent.mission}</p>
+                  <p className="text-[10px] text-gray-400 mt-0.5 truncate">{agent.mission}</p>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1.5">
                   <PixelHeart size={12} className="text-red-400" />
-                  <PixelProgress value={agent.hp} max={100} variant={agent.hp > 90 ? 'green' : agent.hp > 70 ? 'yellow' : 'red'} />
-                  <span className="text-[10px] text-gray-400 w-7 text-right">{agent.hp}%</span>
+                  <span className="text-[10px] font-mono text-gray-700">{agent.hp}%</span>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Recent Mission Log */}
+        {/* System Status */}
         <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
-          <div
-            className="px-5 py-3 border-b border-gray-100"
-            style={{
-              backgroundImage: 'linear-gradient(90deg, transparent 7px, rgba(0,0,0,0.015) 1px)',
-              backgroundSize: '8px 100%',
-            }}
-          >
-            <div className="flex items-center justify-between">
-              <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                Mission Log
-              </h2>
-              <Link href="/missions" className="text-[10px] text-blue-500 hover:text-blue-600 font-medium">
-                View all →
-              </Link>
-            </div>
+          <div className="px-5 py-3 border-b border-gray-100"
+            style={{ backgroundImage: 'linear-gradient(90deg, transparent 7px, rgba(0,0,0,0.015) 1px)', backgroundSize: '8px 100%' }}>
+            <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">System</h2>
           </div>
-          <div className="divide-y divide-gray-50">
-            {missionLog.map((log) => (
-              <div key={log.id} className="px-5 py-2.5 flex items-center gap-3">
-                <div
-                  className={`w-3 h-3 rounded-sm flex items-center justify-center shrink-0 ${
-                    log.status === 'completed' ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'
-                  }`}
-                >
-                  <PixelCheck size={10} />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-xs font-medium text-gray-900 truncate">{log.title}</p>
-                  <p className="text-[10px] text-gray-400">
-                    {log.id} · {log.agent}
-                  </p>
-                </div>
-                <span className="text-[10px] text-gray-400 shrink-0">{log.time}</span>
+          <div className="px-5 py-3 space-y-2.5">
+            {[
+              { label: 'Main Agent', ok: true },
+              { label: 'Guarddog Agent', ok: true },
+              { label: 'Daily Security Audit', ok: false, note: 'Last error: 12h ago' },
+              { label: 'Nightly Build', ok: true },
+              { label: 'Memory Cron', ok: true },
+            ].map(item => (
+              <div key={item.label} className="flex items-center justify-between">
+                <span className="text-[11px] text-gray-600">{item.label}</span>
+                <span className={`text-[9px] font-medium ${item.ok ? 'text-green-600' : 'text-red-600'}`}>
+                  {item.ok ? '● ok' : '● error'}
+                </span>
               </div>
             ))}
           </div>
+        </div>
+      </div>
+
+      {/* Mission Log */}
+      <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+        <div className="px-5 py-3 border-b border-gray-100"
+          style={{ backgroundImage: 'linear-gradient(90deg, transparent 7px, rgba(0,0,0,0.015) 1px)', backgroundSize: '8px 100%' }}>
+          <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Recent Activity</h2>
+        </div>
+        <div className="divide-y divide-gray-50">
+          {missionLog.map((entry, i) => (
+            <div key={i} className="px-5 py-2.5 flex items-center gap-3">
+              {entry.status === 'ok' || entry.status === 'completed'
+                ? <PixelCheck size={12} className="text-green-500 shrink-0" />
+                : <PixelAlert size={12} className="text-red-500 shrink-0" />
+              }
+              <span className="text-[10px] font-mono text-gray-400 w-16 shrink-0">{entry.agent}</span>
+              <span className="text-[11px] text-gray-900 flex-1">{entry.title}</span>
+              <span className="text-[9px] text-gray-400">{entry.time}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>

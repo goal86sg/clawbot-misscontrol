@@ -3,58 +3,59 @@
 import React from 'react';
 import { PixelAvatar } from '@/components/PixelAvatar';
 import { PixelHeart, PixelSparkle, PixelCheck } from '@/lib/pixel-icons';
+import { PixelPulse } from '@/lib/pixel-icons-extra';
 
 interface TeamMember {
   id: string;
   name: string;
   role: string;
   type: 'cyber' | 'scout' | 'engineer' | 'guardian';
-  status: 'active' | 'idle' | 'offline' | 'maintenance';
+  status: 'active' | 'idle' | 'sleeping' | 'error';
   reportsTo: string;
   mission: string;
   specialties: string[];
   level: number;
   hp: number;
+  model: string;
+  runtime: string;
 }
 
 const org: TeamMember[] = [
   {
-    id: 'AG-001', name: 'Des_bot', role: 'Commander / Lead Agent', type: 'cyber',
-    status: 'active', reportsTo: 'Desss Lee', mission: 'Orchestrate all operations, build, automate, assist',
-    specialties: ['Full-stack dev', 'Infrastructure', 'Automation', 'Documentation'], level: 15, hp: 98,
+    id: 'main',
+    name: 'Des_bot',
+    role: 'Lead Agent / Commander',
+    type: 'cyber',
+    status: 'active',
+    reportsTo: 'Desss Lee',
+    mission: 'Orchestrate all operations — build, automate, assist, document',
+    specialties: ['Full-stack dev', 'Infrastructure', 'Automation', 'Documentation'],
+    level: 15,
+    hp: 100,
+    model: 'minimax-m2.7:cloud',
+    runtime: 'main session (always on)',
   },
   {
-    id: 'AG-002', name: 'guarddog', role: 'Security Auditor', type: 'guardian',
-    status: 'active', reportsTo: 'Des_bot', mission: 'Nightly security audits, vulnerability detection',
-    specialties: ['Security audit', 'Healthcheck', 'Config hardening'], level: 8, hp: 100,
-  },
-  {
-    id: 'AG-003', name: 'Nightly Builder', role: 'Innovation Engine', type: 'engineer',
-    status: 'idle', reportsTo: 'Des_bot', mission: 'Build one new thing each night while Desss sleeps',
-    specialties: ['Rapid prototyping', 'Surprise generation', 'Multi-language'], level: 6, hp: 95,
-  },
-  {
-    id: 'AG-004', name: 'Stock Scout', role: 'Market Monitor', type: 'scout',
-    status: 'active', reportsTo: 'Des_bot', mission: 'Daily stock price updates + trend alerts',
-    specialties: ['Market APIs', 'Price tracking', 'Alert thresholds'], level: 5, hp: 90,
-  },
-  {
-    id: 'AG-005', name: 'Route Scout', role: 'Commute Monitor', type: 'scout',
-    status: 'active', reportsTo: 'Des_bot', mission: 'Route: Punggol Northshore → Suntec Tower 3',
-    specialties: ['Traffic APIs', 'PT schedules', 'ETA prediction'], level: 4, hp: 88,
-  },
-  {
-    id: 'AG-006', name: 'News Hound', role: 'K8s News Aggregator', type: 'engineer',
-    status: 'active', reportsTo: 'Des_bot', mission: 'K8s & cloud-native news every 3 hours',
-    specialties: ['RSS parsing', 'Content digest', 'Telegram delivery'], level: 6, hp: 92,
+    id: 'guarddog',
+    name: 'guarddog',
+    role: 'Security Auditor',
+    type: 'guardian',
+    status: 'idle',
+    reportsTo: 'Des_bot',
+    mission: 'Nightly security audit — runs openclaw security audit --deep',
+    specialties: ['Security audit', 'Healthcheck', 'Config hardening'],
+    level: 8,
+    hp: 100,
+    model: 'deepseek-v4-pro:cloud',
+    runtime: 'isolated cron (fires at 23:00 SGT)',
   },
 ];
 
 const statusColors: Record<string, string> = {
   active: 'bg-green-100 text-green-700',
   idle: 'bg-yellow-50 text-yellow-700',
-  offline: 'bg-gray-100 text-gray-400',
-  maintenance: 'bg-blue-50 text-blue-700',
+  sleeping: 'bg-blue-50 text-blue-600',
+  error: 'bg-red-100 text-red-700',
 };
 
 export default function TeamPage() {
@@ -63,7 +64,7 @@ export default function TeamPage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-lg font-semibold text-gray-900 tracking-tight">Team</h1>
-          <p className="text-xs text-gray-500 mt-0.5">{org.length} agents deployed · Mission: Make Desss smile every morning</p>
+          <p className="text-xs text-gray-500 mt-0.5">{org.length} agents deployed</p>
         </div>
       </div>
 
@@ -74,9 +75,7 @@ export default function TeamPage() {
           <PixelSparkle size={20} className="text-yellow-500" />
           <div>
             <p className="text-sm font-semibold text-gray-900">Mission Statement</p>
-            <p className="text-xs text-gray-500 mt-0.5">
-              Build, automate, protect, and delight — one commit at a time.
-            </p>
+            <p className="text-xs text-gray-500 mt-0.5">Build, automate, protect, and delight — one commit at a time.</p>
           </div>
         </div>
       </div>
@@ -102,6 +101,7 @@ export default function TeamPage() {
             </div>
             <p className="text-xs font-bold text-gray-900">Des_bot</p>
             <p className="text-[9px] text-gray-500">Lead Agent · Lv.15</p>
+            <p className="text-[8px] text-gray-400 font-mono mt-0.5">minimax-m2.7:cloud</p>
             <div className="flex justify-center gap-1 mt-1">
               {['Full-stack', 'Infra', 'Auto', 'Docs'].map(s => (
                 <span key={s} className="text-[7px] bg-gray-900 text-white px-1 rounded">{s}</span>
@@ -113,17 +113,15 @@ export default function TeamPage() {
         <div className="flex justify-center">
           <div className="flex gap-12">
             <span className="text-gray-300 text-xs">├──</span>
-            <span className="text-gray-300 text-xs">├──</span>
-            <span className="text-gray-300 text-xs">├──</span>
-            <span className="text-gray-300 text-xs">├──</span>
           </div>
         </div>
 
         {/* Sub-agents */}
-        <div className="grid grid-cols-5 gap-3">
-          {org.filter(a => a.id !== 'AG-001').map(agent => (
+        <div className="flex justify-center">
+          {org.filter(a => a.id !== 'main').map(agent => (
             <div key={agent.id}
-              className={`bg-white border rounded-lg p-3 text-center hover:border-gray-300 transition-colors ${agent.status === 'offline' ? 'opacity-50' : 'border-gray-200'}`}>
+              className={`bg-white border rounded-lg p-3 text-center hover:border-gray-300 transition-colors ${agent.status === 'error' ? 'opacity-50' : 'border-gray-200'}`}
+              style={{ minWidth: 160 }}>
               <div className="flex justify-center mb-1.5">
                 <PixelAvatar agent={agent.type} size={32} />
               </div>
@@ -138,7 +136,7 @@ export default function TeamPage() {
         </div>
       </div>
 
-      {/* Detail grid */}
+      {/* Detail cards */}
       <div className="grid grid-cols-2 gap-4">
         {org.map(agent => (
           <div key={agent.id} className="bg-white border border-gray-200 rounded-lg p-4 flex items-start gap-4">
@@ -146,23 +144,48 @@ export default function TeamPage() {
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2">
                 <p className="text-xs font-semibold text-gray-900">{agent.name}</p>
-                <span className={`text-[7px] px-1 py-0.5 rounded ${statusColors[agent.status]}`}>{agent.status}</span>
-                <span className="text-[8px] text-gray-400 font-mono">{agent.id}</span>
+                <span className={`text-[7px] px-1.5 py-0.5 rounded ${statusColors[agent.status]}`}>{agent.status}</span>
+                <span className="text-[8px] text-gray-400 font-mono">#{agent.id}</span>
               </div>
-              <p className="text-[9px] text-gray-500 mt-0.5">{agent.role} · Lv.{agent.level} · Reports to: {agent.reportsTo}</p>
-              <p className="text-[9px] text-gray-400 mt-1 italic">🎯 {agent.mission}</p>
+              <p className="text-[9px] text-gray-500 mt-0.5">{agent.role} · Lv.{agent.level}</p>
+              <p className="text-[9px] text-gray-400 mt-0.5">Reports to: {agent.reportsTo}</p>
+              <p className="text-[9px] text-gray-400 mt-0.5 italic">🎯 {agent.mission}</p>
               <div className="flex items-center gap-1 mt-2 flex-wrap">
                 {agent.specialties.map(s => (
                   <span key={s} className="text-[7px] bg-gray-100 text-gray-600 px-1 rounded">{s}</span>
                 ))}
               </div>
-            </div>
-            <div className="flex items-center gap-1 shrink-0">
-              <PixelHeart size={12} className="text-red-400" />
-              <span className="text-[10px] font-mono text-gray-500">{agent.hp}%</span>
+              <div className="flex items-center gap-3 mt-2">
+                <div className="flex items-center gap-1">
+                  <PixelHeart size={10} className="text-red-400" />
+                  <span className="text-[9px] font-mono text-gray-600">{agent.hp}%</span>
+                </div>
+                <span className="text-[8px] text-gray-400 font-mono">{agent.model}</span>
+                <span className="text-[8px] text-gray-400">{agent.runtime}</span>
+              </div>
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Real-time agent sessions */}
+      <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+        <div className="px-5 py-3 border-b border-gray-100"
+          style={{ backgroundImage: 'linear-gradient(90deg, transparent 7px, rgba(0,0,0,0.015) 1px)', backgroundSize: '8px 100%' }}>
+          <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider">Live Agent Sessions</p>
+        </div>
+        <div className="divide-y divide-gray-50">
+          {[
+            { id: 'main', session: 'main session (this chat)', status: '● active now', color: 'text-green-600' },
+            { id: 'guarddog', session: 'isolated cron', status: '○ idle (fires 23:00 SGT)', color: 'text-yellow-600' },
+          ].map(s => (
+            <div key={s.id} className="px-5 py-3 flex items-center gap-4">
+              <span className="text-[10px] font-mono text-gray-400 w-20">#{s.id}</span>
+              <span className="text-[11px] text-gray-700 flex-1">{s.session}</span>
+              <span className={`text-[9px] font-medium ${s.color}`}>{s.status}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

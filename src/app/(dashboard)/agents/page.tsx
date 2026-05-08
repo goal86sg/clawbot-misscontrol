@@ -3,100 +3,67 @@
 import React from 'react';
 import { PixelAvatar } from '@/components/PixelAvatar';
 import { PixelProgress } from '@/components/PixelProgress';
-import { PixelHeart, PixelSparkle, PixelPlay } from '@/lib/pixel-icons';
+import { PixelHeart, PixelSparkle, PixelCheck, PixelAlert } from '@/lib/pixel-icons';
+import { PixelPulse as PixPulse } from '@/lib/pixel-icons-extra';
 
-const agents = [
+interface Agent {
+  id: string;
+  name: string;
+  type: 'cyber' | 'scout' | 'engineer' | 'guardian';
+  role: string;
+  status: 'active' | 'idle' | 'sleeping' | 'error';
+  hp: number;
+  mission: string;
+  level: number;
+  xp: number;
+  spec: string;
+  model: string;
+  runtime: string;
+}
+
+const agents: Agent[] = [
   {
-    name: 'Cyber-7',
-    type: 'cyber' as const,
-    role: 'Network Scanner',
+    id: 'main',
+    name: 'Des_bot',
+    type: 'cyber',
+    role: 'Lead Agent / Commander',
     status: 'active',
-    hp: 92,
-    mission: 'Port sweep on subnet 10.0.1.0/24',
-    level: 12,
-    xp: 78,
-    spec: 'Vulnerability Detection',
-    online: '3h 42m',
+    hp: 100,
+    mission: 'Building, automating, assisting — all operations',
+    level: 15,
+    xp: 95,
+    spec: 'Full-stack · Infra · Automation · Docs',
+    model: 'minimax-m2.7:cloud',
+    runtime: 'main session',
   },
   {
-    name: 'Scout-2',
-    type: 'scout' as const,
-    role: 'Recon Unit',
-    status: 'active',
-    hp: 88,
-    mission: 'OSINT gathering - target profile Delta',
-    level: 9,
-    xp: 45,
-    spec: 'OSINT Collection',
-    online: '6h 15m',
-  },
-  {
-    name: 'Engi-4',
-    type: 'engineer' as const,
-    role: 'Systems Engineer',
+    id: 'guarddog',
+    name: 'guarddog',
+    type: 'guardian',
+    role: 'Security Auditor',
     status: 'idle',
     hp: 100,
-    mission: '—',
-    level: 15,
-    xp: 92,
-    spec: 'Infrastructure',
-    online: '0h 2m',
-  },
-  {
-    name: 'Guard-1',
-    type: 'guardian' as const,
-    role: 'Security Watchdog',
-    status: 'active',
-    hp: 76,
-    mission: 'Perimeter breach monitoring',
-    level: 11,
-    xp: 63,
-    spec: 'Threat Detection',
-    online: '12h 08m',
-  },
-  {
-    name: 'Byte-9',
-    type: 'cyber' as const,
-    role: 'Data Miner',
-    status: 'offline',
-    hp: 0,
-    mission: '—',
+    mission: 'Nightly security audit — runs --deep, reports to Telegram',
     level: 8,
-    xp: 31,
-    spec: 'Pattern Recognition',
-    online: '—',
-  },
-  {
-    name: 'Echo-3',
-    type: 'scout' as const,
-    role: 'Signal Interceptor',
-    status: 'maintenance',
-    hp: 45,
-    mission: '—',
-    level: 7,
-    xp: 18,
-    spec: 'Signal Analysis',
-    online: '0h 0m',
-  },
-  {
-    name: 'Forge-5',
-    type: 'engineer' as const,
-    role: 'Build Specialist',
-    status: 'active',
-    hp: 95,
-    mission: 'CI/CD pipeline audit',
-    level: 14,
-    xp: 87,
-    spec: 'DevOps',
-    online: '2h 20m',
+    xp: 60,
+    spec: 'Security audit · Healthcheck · Config hardening',
+    model: 'deepseek-v4-pro:cloud',
+    runtime: 'isolated cron',
   },
 ];
 
-const statusStyles: Record<string, string> = {
+const statusColors: Record<string, string> = {
   active: 'bg-green-100 text-green-700 border-green-200',
   idle: 'bg-yellow-50 text-yellow-700 border-yellow-200',
-  offline: 'bg-gray-100 text-gray-400 border-gray-200',
-  maintenance: 'bg-blue-50 text-blue-700 border-blue-200',
+  sleeping: 'bg-blue-50 text-blue-600 border-blue-200',
+  error: 'bg-red-100 text-red-700 border-red-200',
+};
+
+const statusIcons: Record<string, React.ReactNode> = {
+  active: <span className="w-1.5 h-1.5 rounded-full bg-green-500 inline-block animate-pulse" />,
+  idle: <span className="w-1.5 h-1.5 rounded-full bg-yellow-500 inline-block" />,
+  sleeping: <span className="w-1.5 h-1.5 rounded-full bg-blue-400 inline-block" />,
+  error: <PixelAlert size={10} className="text-red-500" />,
 };
 
 export default function AgentsPage() {
@@ -105,72 +72,95 @@ export default function AgentsPage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-lg font-semibold text-gray-900 tracking-tight">Agents</h1>
-          <p className="text-xs text-gray-500 mt-0.5">7 agents deployed · 5 active</p>
+          <p className="text-xs text-gray-500 mt-0.5">{agents.length} agents registered · {agents.filter(a => a.status === 'active').length} active</p>
         </div>
-        <button className="flex items-center gap-2 px-3 py-1.5 bg-gray-900 text-white text-xs rounded-md font-medium hover:bg-gray-800 transition-colors">
-          <PixelSparkle size={12} />
-          DEPLOY AGENT
-        </button>
       </div>
 
-      {/* Agent Cards Grid */}
       <div className="grid grid-cols-2 gap-4">
-        {agents.map((agent) => (
-          <div
-            key={agent.name}
-            className={`bg-white border border-gray-200 rounded-lg overflow-hidden ${
-              agent.status === 'offline' ? 'opacity-50' : ''
-            }`}
-          >
-            <div className="px-5 py-4 flex items-start gap-4">
+        {agents.map(agent => (
+          <div key={agent.id} className="bg-white border border-gray-200 rounded-xl overflow-hidden">
+            {/* Header */}
+            <div className="px-5 py-4 flex items-start gap-4 bg-gray-50/50 border-b border-gray-100">
               <PixelAvatar agent={agent.type} size={48} />
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2">
-                  <h3 className="text-sm font-semibold text-gray-900">{agent.name}</h3>
-                  <span
-                    className={`text-[9px] px-1.5 py-0.5 rounded border font-medium uppercase ${statusStyles[agent.status]}`}
-                  >
-                    {agent.status}
+                  <h3 className="text-sm font-bold text-gray-900">{agent.name}</h3>
+                  <span className={`text-[9px] px-1.5 py-0.5 rounded border font-medium inline-flex items-center gap-1 ${statusColors[agent.status]}`}>
+                    {statusIcons[agent.status]} {agent.status}
                   </span>
+                  <span className="text-[9px] font-mono text-gray-400 bg-gray-100 px-1.5 py-0.5 rounded">#{agent.id}</span>
                 </div>
-                <p className="text-[11px] text-gray-500 mt-0.5">
-                  {agent.role} · Lv.{agent.level} · {agent.spec}
-                </p>
-
-                {/* HP Bar */}
-                {agent.status !== 'offline' && (
-                  <div className="flex items-center gap-2 mt-3">
-                    <PixelHeart size={12} className="text-red-400" />
-                    <PixelProgress
-                      value={agent.hp}
-                      max={100}
-                      variant={agent.hp > 90 ? 'green' : agent.hp > 70 ? 'yellow' : 'red'}
-                    />
-                    <span className="text-[10px] text-gray-400">{agent.hp}%</span>
-                  </div>
-                )}
-
-                {/* XP Bar */}
-                {agent.status !== 'offline' && (
-                  <div className="flex items-center gap-2 mt-1.5">
-                    <PixelSparkle size={12} className="text-blue-400" />
-                    <PixelProgress value={agent.xp} max={100} variant="blue" />
-                    <span className="text-[10px] text-gray-400">XP {agent.xp}%</span>
-                  </div>
-                )}
-
-                {/* Mission */}
-                <div className="mt-3 pt-3 border-t border-gray-50 flex items-center justify-between">
-                  <div className="flex items-center gap-1.5">
-                    <PixelPlay size={10} className="text-gray-400" />
-                    <span className="text-[10px] text-gray-500">
-                      {agent.status === 'active' ? agent.mission : 'No active mission'}
-                    </span>
-                  </div>
-                  <span className="text-[10px] text-gray-400">Online: {agent.online}</span>
+                <p className="text-[11px] text-gray-500 mt-0.5">{agent.role}</p>
+                <div className="flex items-center gap-1 mt-1">
+                  <span className="text-[8px] bg-gray-900 text-white px-1.5 py-0.5 rounded font-mono">Lv.{agent.level}</span>
+                  <span className="text-[8px] bg-gray-800 text-gray-300 px-1.5 py-0.5 rounded font-mono">{agent.model}</span>
                 </div>
               </div>
             </div>
+
+            {/* Mission */}
+            <div className="px-5 py-3 border-b border-gray-100">
+              <p className="text-[9px] text-gray-400 uppercase tracking-wider mb-1">🎯 Current Mission</p>
+              <p className="text-xs text-gray-700">{agent.mission}</p>
+            </div>
+
+            {/* HP + XP */}
+            <div className="px-5 py-3 border-b border-gray-100 grid grid-cols-2 gap-4">
+              <div>
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-[9px] text-gray-400 uppercase tracking-wider">HP</span>
+                  <span className="text-[10px] font-mono text-gray-700 flex items-center gap-1">
+                    <PixelHeart size={10} className="text-red-400" /> {agent.hp}%
+                  </span>
+                </div>
+                <PixelProgress value={agent.hp} max={100} variant="green" />
+              </div>
+              <div>
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-[9px] text-gray-400 uppercase tracking-wider">XP</span>
+                  <span className="text-[10px] font-mono text-gray-700">{agent.xp}%</span>
+                </div>
+                <PixelProgress value={agent.xp} max={100} variant="blue" />
+              </div>
+            </div>
+
+            {/* Spec + Runtime */}
+            <div className="px-5 py-3 flex items-center justify-between">
+              <div className="flex items-center gap-1 flex-wrap">
+                {agent.spec.split(' · ').map(s => (
+                  <span key={s} className="text-[8px] bg-gray-100 text-gray-600 px-1.5 py-0.5 rounded">{s}</span>
+                ))}
+              </div>
+              <span className="text-[9px] text-gray-400 font-mono">{agent.runtime}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Agent schema */}
+      <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+        <div className="px-5 py-3 border-b border-gray-100"
+          style={{ backgroundImage: 'linear-gradient(90deg, transparent 7px, rgba(0,0,0,0.015) 1px)', backgroundSize: '8px 100%' }}>
+          <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider">Agent Schema</p>
+        </div>
+        <div className="px-5 py-3 grid grid-cols-12 gap-4 text-[10px]">
+          <span className="col-span-1 font-mono text-gray-400">ID</span>
+          <span className="col-span-3 font-semibold text-gray-700">Name + Role</span>
+          <span className="col-span-2 text-gray-400">Type</span>
+          <span className="col-span-2 text-gray-400">Model</span>
+          <span className="col-span-2 text-gray-400">Runtime</span>
+          <span className="col-span-2 text-gray-400">Status</span>
+        </div>
+        {agents.map(a => (
+          <div key={a.id} className="px-5 py-2.5 grid grid-cols-12 gap-4 items-center border-t border-gray-50 hover:bg-gray-50/50 text-[11px]">
+            <span className="col-span-1 font-mono text-gray-400">#{a.id}</span>
+            <span className="col-span-3 font-medium text-gray-900">{a.name} <span className="text-gray-400 font-normal">— {a.role}</span></span>
+            <span className="col-span-2 text-gray-600 capitalize">{a.type}</span>
+            <span className="col-span-2 font-mono text-gray-500 text-[10px]">{a.model}</span>
+            <span className="col-span-2 text-[10px] text-gray-400">{a.runtime}</span>
+            <span className={`col-span-2 text-[9px] px-1.5 py-0.5 rounded border font-medium inline-flex items-center gap-1 ${statusColors[a.status]}`}>
+              {statusIcons[a.status]} {a.status}
+            </span>
           </div>
         ))}
       </div>
