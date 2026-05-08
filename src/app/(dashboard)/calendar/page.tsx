@@ -20,7 +20,7 @@ const cronEntries: CronEntry[] = [
   { name: 'nightly:build-something-delightful', schedule: '0 20 * * *', sgtTime: '04:00', agent: 'main', status: 'active', lastRun: '—', nextRun: 'Tomorrow 04:00', description: 'Builds a new tool/feature while Desss sleeps' },
   { name: 'daily-stock-update', schedule: '0 0 * * 1-5', sgtTime: '08:00', agent: 'main', status: 'ok', lastRun: 'May 7 08:00', nextRun: 'May 8 08:00', description: 'Morning stock price update via Telegram' },
   { name: 'daily-route-check', schedule: '0 0 * * 1-5', sgtTime: '08:00', agent: 'main', status: 'ok', lastRun: 'May 7 08:00', nextRun: 'May 8 08:00', description: 'Route: Punggol Northshore → Suntec Tower 3' },
-  { name: 'k8s-news-monitor', schedule: '0 */3 * * *', sgtTime: 'Every 3h', agent: 'main', status: 'active', lastRun: 'May 7 06:00', nextRun: 'May 7 09:00', description: 'K8s & cloud-native news aggregation' },
+  { name: 'morning_scout:daily-digest', schedule: '0 0 * * 1-5', sgtTime: '08:00', agent: 'main', status: 'active', lastRun: '—', nextRun: 'Tomorrow 08:00', description: 'Daily tech news: HN · Reddit · K8s/CNCF · GitHub · AI. Scored digest + 2-3 videos to Telegram' },
   { name: 'memory-dreaming-promotion', schedule: '0 3 * * *', sgtTime: '11:00', agent: '—', status: 'ok', lastRun: 'May 7 03:00', nextRun: 'May 8 11:00', description: 'Memory compaction + dream promotion' },
 ];
 

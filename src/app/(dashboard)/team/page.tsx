@@ -47,7 +47,21 @@ const org: TeamMember[] = [
     level: 8,
     hp: 100,
     model: 'deepseek-v4-pro:cloud',
-    runtime: 'isolated cron (fires at 23:00 SGT)',
+    runtime: 'isolated cron (fires 23:00 SGT)',
+  },
+  {
+    id: 'morning_scout',
+    name: 'morning_scout',
+    role: 'News Scout',
+    type: 'scout',
+    status: 'idle',
+    reportsTo: 'Des_bot',
+    mission: 'Daily tech news digest — HN · Reddit · K8s/CNCF · GitHub · ArXiv · AI, scored by interest',
+    specialties: ['RSS scraping', 'HN API', 'ArXiv', 'GitHub Trending', 'Video search (Invidious)', 'Interest scoring'],
+    level: 5,
+    hp: 100,
+    model: 'minimax-m2.7:cloud',
+    runtime: 'isolated cron (fires 08:00 SGT Mon-Fri)',
   },
 ];
 
