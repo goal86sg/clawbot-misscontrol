@@ -100,6 +100,19 @@ export const PixelPulse: React.FC<PixelIconProps> = ({ size = 16, className }) =
   </svg>
 );
 
+export const PixelActivity: React.FC<PixelIconProps> = ({ size = 16, className }) => (
+  <svg width={size} height={size} viewBox="0 0 8 8" className={className} shapeRendering="crispEdges">
+    <rect x="0" y="5" width="1" height="2" fill="currentColor" />
+    <rect x="1" y="4" width="1" height="3" fill="currentColor" />
+    <rect x="2" y="3" width="1" height="4" fill="currentColor" />
+    <rect x="3" y="2" width="1" height="5" fill="currentColor" />
+    <rect x="4" y="1" width="1" height="6" fill="currentColor" />
+    <rect x="5" y="2" width="1" height="5" fill="currentColor" />
+    <rect x="6" y="3" width="1" height="4" fill="currentColor" />
+    <rect x="7" y="5" width="1" height="2" fill="currentColor" />
+  </svg>
+);
+
 export const PixelSound: React.FC<PixelIconProps> = ({ size = 16, className }) => (
   <svg width={size} height={size} viewBox="0 0 8 8" className={className} shapeRendering="crispEdges">
     <rect x="0" y="3" width="1" height="2" fill="currentColor" />
