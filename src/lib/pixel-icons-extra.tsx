@@ -121,3 +121,14 @@ export const PixelSound: React.FC<PixelIconProps> = ({ size = 16, className }) =
     <rect x="6" y="0" width="1" height="8" fill="currentColor" />
   </svg>
 );
+
+export const PixelBell: React.FC<PixelIconProps> = ({ size = 16, className }) => (
+  <svg width={size} height={size} viewBox="0 0 8 8" className={className} shapeRendering="crispEdges">
+    <rect x="3" y="0" width="2" height="1" fill="currentColor" />
+    <rect x="2" y="1" width="4" height="1" fill="currentColor" />
+    <rect x="1" y="2" width="6" height="4" fill="currentColor" />
+    <rect x="2" y="3" width="4" height="2" fill="currentColor" opacity="0.2" />
+    <rect x="3" y="6" width="2" height="1" fill="currentColor" />
+    <rect x="3" y="7" width="2" height="1" fill="currentColor" />
+  </svg>
+);
