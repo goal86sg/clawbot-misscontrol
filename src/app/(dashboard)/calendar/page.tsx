@@ -16,12 +16,11 @@ interface CronEntry {
 }
 
 const cronEntries: CronEntry[] = [
-  { name: 'healthcheck:daily-security-audit', schedule: '0 15 * * *', sgtTime: '23:00', agent: 'guarddog', status: 'active', lastRun: '—', nextRun: 'Tonight 23:00', description: 'Daily security audit — runs --deep, reports to Telegram' },
-  { name: 'nightly:build-something-delightful', schedule: '0 20 * * *', sgtTime: '04:00', agent: 'main', status: 'active', lastRun: '—', nextRun: 'Tomorrow 04:00', description: 'Builds a new tool/feature while Desss sleeps' },
-  { name: 'daily-stock-update', schedule: '0 0 * * 1-5', sgtTime: '08:00', agent: 'main', status: 'ok', lastRun: 'May 7 08:00', nextRun: 'May 8 08:00', description: 'Morning stock price update via Telegram' },
-  { name: 'daily-route-check', schedule: '0 0 * * 1-5', sgtTime: '08:00', agent: 'main', status: 'ok', lastRun: 'May 7 08:00', nextRun: 'May 8 08:00', description: 'Route: Punggol Northshore → Suntec Tower 3' },
-  { name: 'morning_scout:daily-digest', schedule: '0 0 * * 1-5', sgtTime: '08:00', agent: 'main', status: 'active', lastRun: '—', nextRun: 'Tomorrow 08:00', description: 'Daily tech news: HN · Reddit · K8s/CNCF · GitHub · AI. Scored digest + 2-3 videos to Telegram' },
-  { name: 'memory-dreaming-promotion', schedule: '0 3 * * *', sgtTime: '11:00', agent: '—', status: 'ok', lastRun: 'May 7 03:00', nextRun: 'May 8 11:00', description: 'Memory compaction + dream promotion' },
+  { name: 'healthcheck:daily-security-audit', schedule: '0 15 * * *', sgtTime: '23:00', agent: 'guarddog', status: 'error', lastRun: '12h ago', nextRun: 'Today 23:00', description: 'Daily security audit — runs --deep, reports to Telegram' },
+  { name: 'nightly:build-something-delightful', schedule: '0 20 * * *', sgtTime: '04:00', agent: 'main', status: 'ok', lastRun: '7h ago', nextRun: 'Tonight 04:00', description: 'Rotating builds — round robins mission-control, ebpf-postgres-dam, spending-tracker, guarddog' },
+  { name: 'daily-briefing:morning-brief', schedule: '0 8 * * 1-5', sgtTime: '08:00', agent: 'daily_briefing', status: 'ok', lastRun: '3h ago', nextRun: 'Tomorrow 08:00', description: 'iCloud calendar briefing + tech digest — Mon-Fri 8AM · delivers to Telegram' },
+  { name: 'morning_scout:daily-digest', schedule: '0 8 * * 1-5', sgtTime: '08:00', agent: 'morning_scout', status: 'ok', lastRun: '57m ago', nextRun: 'Tomorrow 08:00', description: 'Daily tech news: HN · Reddit · K8s/CNCF · GitHub · ArXiv · AI · scored + ranked' },
+  { name: 'Memory Dreaming Promotion', schedule: '0 3 * * *', sgtTime: '11:00', agent: 'system', status: 'ok', lastRun: 'Yesterday 11:00', nextRun: 'Tomorrow 11:00', description: 'Memory compaction + long-term truth extraction from daily logs' },
 ];
 
 const statusColors: Record<string, string> = {
