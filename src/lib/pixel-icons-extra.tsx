@@ -132,3 +132,14 @@ export const PixelBell: React.FC<PixelIconProps> = ({ size = 16, className }) =>
     <rect x="3" y="7" width="2" height="1" fill="currentColor" />
   </svg>
 );
+
+export const PixelPortfolio: React.FC<PixelIconProps> = ({ size = 16, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    <rect x="1" y="1" width="14" height="14" fill="currentColor" opacity="0.1" />
+    <rect x="1" y="1" width="14" height="2" fill="currentColor" opacity="0.4" />
+    <rect x="4" y="5" width="2" height="6" fill="currentColor" />
+    <rect x="7" y="7" width="2" height="5" fill="currentColor" opacity="0.6" />
+    <rect x="10" y="4" width="2" height="7" fill="currentColor" opacity="0.3" />
+    <rect x="1" y="13" width="14" height="2" fill="currentColor" opacity="0.3" />
+  </svg>
+);

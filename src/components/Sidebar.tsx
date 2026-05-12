@@ -23,6 +23,7 @@ import {
   PixelSound,
   PixelActivity,
   PixelBell,
+  PixelPortfolio,
 } from '@/lib/pixel-icons-extra';
 
 const navGroups = [
@@ -48,6 +49,7 @@ const navGroups = [
     label: 'Knowledge',
     items: [
       { href: '/projects', label: 'Projects', icon: PixelProjects },
+      { href: '/portfolio', label: 'Portfolio', icon: PixelPortfolio },
       { href: '/memory', label: 'Memory', icon: PixelMemory },
       { href: '/docs', label: 'Docs', icon: PixelDocs },
     ],
@@ -137,7 +139,7 @@ export const Sidebar: React.FC = () => {
             <rect x="3" y="0" width="2" height="8" fill="currentColor" />
             <rect x="6" y="2" width="2" height="4" fill="currentColor" />
           </svg>
-          <span className="text-[9px] text-gray-400">v2.4.0 · 18 screens</span>
+          <span className="text-[9px] text-gray-400">v2.4.0 · 19 screens</span>
         </div>
       </div>
     </aside>

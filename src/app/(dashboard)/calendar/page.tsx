@@ -9,7 +9,7 @@ interface CronEntry {
   schedule: string;
   sgtTime: string;
   agent: string;
-  status: 'active' | 'idle' | 'ok' | 'failed';
+  status: 'active' | 'idle' | 'ok' | 'failed' | 'error';
   lastRun: string;
   nextRun: string;
   description: string;
