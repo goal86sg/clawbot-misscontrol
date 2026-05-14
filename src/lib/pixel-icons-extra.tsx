@@ -156,3 +156,16 @@ export const PixelStandup: React.FC<PixelIconProps> = ({ size = 24, className })
     <rect x="12" y="2" width="2" height="3" fill="currentColor" opacity="0.3" />
   </svg>
 );
+
+export const PixelGoals: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    <rect x="7" y="1" width="2" height="2" fill="currentColor" />
+    <rect x="5" y="3" width="6" height="2" fill="currentColor" />
+    <rect x="3" y="5" width="10" height="8" fill="currentColor" opacity="0.15" />
+    <rect x="4" y="6" width="2" height="6" fill="currentColor" opacity="0.5" />
+    <rect x="7" y="8" width="2" height="4" fill="currentColor" />
+    <rect x="10" y="7" width="2" height="4" fill="currentColor" opacity="0.4" />
+    <rect x="3" y="13" width="10" height="2" fill="currentColor" opacity="0.3" />
+    <rect x="7" y="13" width="2" height="2" fill="currentColor" />
+  </svg>
+);
