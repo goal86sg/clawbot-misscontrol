@@ -24,12 +24,14 @@ import {
   PixelActivity,
   PixelBell,
   PixelPortfolio,
+  PixelStandup,
 } from '@/lib/pixel-icons-extra';
 
 const navGroups = [
   {
     label: 'Overview',
     items: [
+      { href: '/standup', label: 'Standup', icon: PixelStandup },
       { href: '/', label: 'Dashboard', icon: PixelHome },
       { href: '/vitals', label: 'Vitals', icon: PixelHeart },
       { href: '/activity', label: 'Activity', icon: PixelActivity },
@@ -139,7 +141,7 @@ export const Sidebar: React.FC = () => {
             <rect x="3" y="0" width="2" height="8" fill="currentColor" />
             <rect x="6" y="2" width="2" height="4" fill="currentColor" />
           </svg>
-          <span className="text-[9px] text-gray-400">v2.4.0 · 19 screens</span>
+          <span className="text-[9px] text-gray-400">v2.4.0 · 20 screens</span>
         </div>
       </div>
     </aside>
