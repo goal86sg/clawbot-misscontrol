@@ -26,6 +26,7 @@ import {
   PixelPortfolio,
   PixelStandup,
   PixelGoals,
+  PixelCommandBar,
 } from '@/lib/pixel-icons-extra';
 
 const navGroups = [
@@ -61,6 +62,7 @@ const navGroups = [
   {
     label: 'Workspace',
     items: [
+      { href: '/commandbar', label: 'Command Bar', icon: PixelCommandBar },
       { href: '/pulse', label: 'Pulse', icon: PixelPulse },
       { href: '/sound', label: 'Sound', icon: PixelSound },
       { href: '/team', label: 'Team', icon: PixelTeam },

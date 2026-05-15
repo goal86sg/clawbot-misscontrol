@@ -169,3 +169,17 @@ export const PixelGoals: React.FC<PixelIconProps> = ({ size = 24, className }) =
     <rect x="7" y="13" width="2" height="2" fill="currentColor" />
   </svg>
 );
+
+export const PixelCommandBar: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    <rect x="1" y="1" width="14" height="14" fill="currentColor" opacity="0.08" />
+    <rect x="2" y="3" width="3" height="2" fill="currentColor" />
+    <rect x="6" y="3" width="8" height="1" fill="currentColor" opacity="0.4" />
+    <rect x="6" y="5" width="5" height="1" fill="currentColor" opacity="0.3" />
+    <rect x="2" y="7" width="12" height="1" fill="currentColor" opacity="0.15" />
+    <rect x="2" y="9" width="2" height="2" fill="currentColor" opacity="0.6" />
+    <rect x="5" y="9" width="6" height="1" fill="currentColor" opacity="0.3" />
+    <rect x="2" y="12" width="12" height="1" fill="currentColor" opacity="0.15" />
+    <rect x="11" y="9" width="3" height="2" fill="currentColor" />
+  </svg>
+);
