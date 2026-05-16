@@ -183,3 +183,20 @@ export const PixelCommandBar: React.FC<PixelIconProps> = ({ size = 24, className
     <rect x="11" y="9" width="3" height="2" fill="currentColor" />
   </svg>
 );
+
+export const PixelWeather: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    <rect x="5" y="0" width="2" height="2" fill="currentColor" />
+    <rect x="3" y="1" width="6" height="1" fill="currentColor" />
+    <rect x="1" y="2" width="10" height="4" fill="currentColor" opacity="0.15" />
+    <rect x="0" y="3" width="1" height="2" fill="currentColor" opacity="0.4" />
+    <rect x="11" y="3" width="1" height="2" fill="currentColor" opacity="0.4" />
+    <rect x="2" y="3" width="2" height="2" fill="currentColor" opacity="0.3" />
+    <rect x="8" y="3" width="2" height="2" fill="currentColor" opacity="0.3" />
+    <rect x="4" y="7" width="4" height="1" fill="currentColor" opacity="0.4" />
+    <rect x="3" y="9" width="2" height="4" fill="currentColor" opacity="0.5" />
+    <rect x="7" y="9" width="2" height="4" fill="currentColor" opacity="0.5" />
+    <rect x="11" y="9" width="2" height="2" fill="currentColor" opacity="0.3" />
+    <rect x="12" y="11" width="2" height="2" fill="currentColor" opacity="0.3" />
+  </svg>
+);

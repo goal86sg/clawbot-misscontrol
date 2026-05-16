@@ -27,6 +27,7 @@ import {
   PixelStandup,
   PixelGoals,
   PixelCommandBar,
+  PixelWeather,
 } from '@/lib/pixel-icons-extra';
 
 const navGroups = [
@@ -36,6 +37,7 @@ const navGroups = [
       { href: '/standup', label: 'Standup', icon: PixelStandup },
       { href: '/', label: 'Dashboard', icon: PixelHome },
       { href: '/vitals', label: 'Vitals', icon: PixelHeart },
+      { href: '/weather', label: 'Weather', icon: PixelWeather },
       { href: '/activity', label: 'Activity', icon: PixelActivity },
       { href: '/goals', label: 'Goals', icon: PixelGoals },
     ],
