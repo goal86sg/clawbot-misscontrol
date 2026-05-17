@@ -200,3 +200,26 @@ export const PixelWeather: React.FC<PixelIconProps> = ({ size = 24, className })
     <rect x="12" y="11" width="2" height="2" fill="currentColor" opacity="0.3" />
   </svg>
 );
+
+export const PixelCommute: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    {/* Train body */}
+    <rect x="3" y="4" width="10" height="6" fill="currentColor" opacity="0.2" />
+    <rect x="4" y="5" width="8" height="4" fill="currentColor" opacity="0.4" />
+    {/* Windows */}
+    <rect x="5" y="6" width="2" height="2" fill="currentColor" />
+    <rect x="9" y="6" width="2" height="2" fill="currentColor" />
+    {/* Wheels */}
+    <rect x="4" y="10" width="2" height="2" fill="currentColor" opacity="0.6" />
+    <rect x="10" y="10" width="2" height="2" fill="currentColor" opacity="0.6" />
+    {/* Track */}
+    <rect x="2" y="12" width="12" height="1" fill="currentColor" opacity="0.2" />
+    {/* Rail ties */}
+    <rect x="3" y="12" width="1" height="1" fill="currentColor" opacity="0.3" />
+    <rect x="7" y="12" width="1" height="1" fill="currentColor" opacity="0.3" />
+    <rect x="11" y="12" width="1" height="1" fill="currentColor" opacity="0.3" />
+    {/* Head */}
+    <rect x="7" y="2" width="2" height="2" fill="currentColor" opacity="0.7" />
+    <rect x="6" y="1" width="4" height="1" fill="currentColor" opacity="0.4" />
+  </svg>
+);
