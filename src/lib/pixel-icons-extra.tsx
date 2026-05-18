@@ -223,3 +223,28 @@ export const PixelCommute: React.FC<PixelIconProps> = ({ size = 24, className })
     <rect x="6" y="1" width="4" height="1" fill="currentColor" opacity="0.4" />
   </svg>
 );
+
+
+export const PixelSpending: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    {/* Dollar sign pixel art */}
+    <rect x="7" y="1" width="2" height="1" fill="currentColor" />
+    <rect x="5" y="2" width="6" height="1" fill="currentColor" opacity="0.3" />
+    <rect x="8" y="3" width="1" height="3" fill="currentColor" />
+    <rect x="6" y="4" width="2" height="1" fill="currentColor" opacity="0.5" />
+    <rect x="5" y="5" width="4" height="1" fill="currentColor" />
+    <rect x="8" y="6" width="1" height="3" fill="currentColor" />
+    <rect x="6" y="8" width="3" height="1" fill="currentColor" opacity="0.4" />
+    <rect x="5" y="10" width="6" height="1" fill="currentColor" />
+    <rect x="8" y="11" width="1" height="1" fill="currentColor" />
+    <rect x="6" y="12" width="4" height="1" fill="currentColor" opacity="0.4" />
+    <rect x="5" y="13" width="2" height="1" fill="currentColor" opacity="0.3" />
+    {/* Coins */}
+    <rect x="2" y="5" width="2" height="2" fill="currentColor" opacity="0.5" />
+    <rect x="1" y="6" width="1" height="1" fill="currentColor" opacity="0.3" />
+    <rect x="3" y="6" width="1" height="1" fill="currentColor" opacity="0.3" />
+    <rect x="12" y="5" width="2" height="2" fill="currentColor" opacity="0.4" />
+    <rect x="11" y="6" width="1" height="1" fill="currentColor" opacity="0.25" />
+    <rect x="13" y="6" width="1" height="1" fill="currentColor" opacity="0.25" />
+  </svg>
+);
