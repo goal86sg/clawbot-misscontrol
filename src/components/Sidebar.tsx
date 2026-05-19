@@ -30,6 +30,7 @@ import {
   PixelWeather,
   PixelCommute,
   PixelSpending,
+  PixelFocus,
 } from '@/lib/pixel-icons-extra';
 
 const navGroups = [
@@ -44,6 +45,7 @@ const navGroups = [
       { href: '/activity', label: 'Activity', icon: PixelActivity },
       { href: '/spending', label: 'Spending', icon: PixelSpending },
       { href: '/goals', label: 'Goals', icon: PixelGoals },
+      { href: '/focus', label: 'Focus', icon: PixelFocus },
     ],
   },
   {

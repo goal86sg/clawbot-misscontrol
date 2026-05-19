@@ -225,6 +225,30 @@ export const PixelCommute: React.FC<PixelIconProps> = ({ size = 24, className })
 );
 
 
+export const PixelFocus: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    {/* Clock face */}
+    <rect x="2" y="2" width="12" height="12" fill="currentColor" opacity="0.1" />
+    <rect x="3" y="3" width="10" height="10" fill="currentColor" opacity="0.2" />
+    <rect x="7" y="5" width="2" height="1" fill="currentColor" />
+    <rect x="7" y="4" width="2" height="1" fill="currentColor" opacity="0.5" />
+    {/* Center dot */}
+    <rect x="7" y="8" width="2" height="2" fill="currentColor" />
+    {/* Minute hand */}
+    <rect x="8" y="7" width="1" height="4" fill="currentColor" />
+    {/* Hour hand */}
+    <rect x="6" y="9" width="2" height="1" fill="currentColor" />
+    {/* Top hour mark */}
+    <rect x="7" y="1" width="2" height="2" fill="currentColor" opacity="0.4" />
+    {/* 3 o'clock mark */}
+    <rect x="13" y="7" width="2" height="2" fill="currentColor" opacity="0.4" />
+    {/* 6 o'clock mark */}
+    <rect x="7" y="13" width="2" height="2" fill="currentColor" opacity="0.4" />
+    {/* 9 o'clock mark */}
+    <rect x="1" y="7" width="2" height="2" fill="currentColor" opacity="0.4" />
+  </svg>
+);
+
 export const PixelSpending: React.FC<PixelIconProps> = ({ size = 24, className }) => (
   <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
     {/* Dollar sign pixel art */}
