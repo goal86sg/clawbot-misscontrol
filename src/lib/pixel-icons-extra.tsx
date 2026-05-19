@@ -272,3 +272,21 @@ export const PixelSpending: React.FC<PixelIconProps> = ({ size = 24, className }
     <rect x="13" y="6" width="1" height="1" fill="currentColor" opacity="0.25" />
   </svg>
 );
+
+export const PixelIncome: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    {/* Coin stack */}
+    <rect x="1" y="9" width="6" height="2" fill="currentColor" opacity="0.3" />
+    <rect x="2" y="8" width="6" height="2" fill="currentColor" opacity="0.4" />
+    <rect x="3" y="6" width="6" height="2" fill="currentColor" opacity="0.6" />
+    <rect x="4" y="5" width="4" height="2" fill="currentColor" />
+    {/* Arrow up */}
+    <rect x="11" y="8" width="2" height="1" fill="currentColor" />
+    <rect x="12" y="6" width="2" height="2" fill="currentColor" />
+    <rect x="13" y="4" width="2" height="2" fill="currentColor" />
+    <rect x="11" y="4" width="2" height="2" fill="currentColor" opacity="0.6" />
+    <rect x="13" y="2" width="2" height="2" fill="currentColor" />
+    <rect x="14" y="0" width="2" height="2" fill="currentColor" />
+    <rect x="12" y="2" width="2" height="2" fill="currentColor" opacity="0.4" />
+  </svg>
+);
