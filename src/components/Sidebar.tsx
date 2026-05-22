@@ -33,6 +33,7 @@ import {
   PixelFocus,
   PixelIncome,
   PixelHabits,
+  PixelMonitor,
 } from '@/lib/pixel-icons-extra';
 
 const navGroups = [
@@ -55,6 +56,7 @@ const navGroups = [
   {
     label: 'Operations',
     items: [
+      { href: '/monitor', label: 'Monitor', icon: PixelMonitor },
       { href: '/tasks', label: 'Tasks', icon: PixelTasks },
       { href: '/calendar', label: 'Calendar', icon: PixelCalendar },
       { href: '/agents', label: 'Agents', icon: PixelAgents },
@@ -157,7 +159,7 @@ export const Sidebar: React.FC = () => {
             <rect x="3" y="0" width="2" height="8" fill="currentColor" />
             <rect x="6" y="2" width="2" height="4" fill="currentColor" />
           </svg>
-          <span className="text-[9px] text-gray-400">v2.6.0 · 23 screens</span>
+          <span className="text-[9px] text-gray-400">v2.7.0 · 30 screens</span>
         </div>
       </div>
     </aside>
