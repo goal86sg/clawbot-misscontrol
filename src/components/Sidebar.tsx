@@ -34,6 +34,7 @@ import {
   PixelIncome,
   PixelHabits,
   PixelMonitor,
+  PixelJournal,
 } from '@/lib/pixel-icons-extra';
 
 const navGroups = [
@@ -51,6 +52,7 @@ const navGroups = [
       { href: '/goals', label: 'Goals', icon: PixelGoals },
       { href: '/focus', label: 'Focus', icon: PixelFocus },
       { href: '/habits', label: 'Habits', icon: PixelHabits },
+      { href: '/journal', label: 'Journal', icon: PixelJournal },
     ],
   },
   {

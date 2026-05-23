@@ -356,3 +356,19 @@ export const PixelPR: React.FC<PixelIconProps> = ({ size = 24, className }) => (
     <rect x="1" y="10" width="4" height="2" fill="currentColor" opacity="0.3" />
   </svg>
 );
+
+export const PixelJournal: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    {/* Open journal with lines */}
+    <rect x="1" y="1" width="14" height="14" fill="currentColor" opacity="0.08" />
+    <rect x="0" y="2" width="3" height="12" fill="currentColor" opacity="0.15" />
+    <rect x="3" y="3" width="10" height="1" fill="currentColor" opacity="0.4" />
+    <rect x="3" y="5" width="8" height="1" fill="currentColor" opacity="0.3" />
+    <rect x="3" y="7" width="9" height="1" fill="currentColor" opacity="0.25" />
+    <rect x="3" y="9" width="7" height="1" fill="currentColor" opacity="0.2" />
+    <rect x="3" y="11" width="6" height="1" fill="currentColor" opacity="0.15" />
+    {/* Bookmark */}
+    <rect x="11" y="1" width="3" height="5" fill="currentColor" opacity="0.25" />
+    <rect x="11" y="6" width="3" height="1" fill="currentColor" opacity="0.15" />
+  </svg>
+);
