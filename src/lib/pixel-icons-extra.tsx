@@ -372,3 +372,29 @@ export const PixelJournal: React.FC<PixelIconProps> = ({ size = 24, className })
     <rect x="11" y="6" width="3" height="1" fill="currentColor" opacity="0.15" />
   </svg>
 );
+
+export const PixelLink: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    {/* Chain link — left side */}
+    <rect x="1" y="5" width="3" height="2" fill="currentColor" opacity="0.5" />
+    <rect x="0" y="4" width="1" height="1" fill="currentColor" />
+    <rect x="0" y="7" width="1" height="1" fill="currentColor" />
+    <rect x="1" y="3" width="2" height="1" fill="currentColor" />
+    <rect x="1" y="8" width="2" height="1" fill="currentColor" />
+    <rect x="2" y="2" width="1" height="1" fill="currentColor" opacity="0.4" />
+    <rect x="2" y="9" width="1" height="1" fill="currentColor" opacity="0.4" />
+    {/* Chain link — right side */}
+    <rect x="12" y="5" width="3" height="2" fill="currentColor" opacity="0.5" />
+    <rect x="15" y="4" width="1" height="1" fill="currentColor" />
+    <rect x="15" y="7" width="1" height="1" fill="currentColor" />
+    <rect x="13" y="3" width="2" height="1" fill="currentColor" />
+    <rect x="13" y="8" width="2" height="1" fill="currentColor" />
+    <rect x="13" y="2" width="1" height="1" fill="currentColor" opacity="0.4" />
+    <rect x="13" y="9" width="1" height="1" fill="currentColor" opacity="0.4" />
+    {/* Middle connector */}
+    <rect x="5" y="6" width="6" height="4" fill="currentColor" opacity="0.1" />
+    <rect x="6" y="5" width="4" height="1" fill="currentColor" opacity="0.3" />
+    <rect x="5" y="7" width="6" height="1" fill="currentColor" opacity="0.2" />
+    <rect x="6" y="8" width="4" height="1" fill="currentColor" opacity="0.15" />
+  </svg>
+);

@@ -35,6 +35,7 @@ import {
   PixelHabits,
   PixelMonitor,
   PixelJournal,
+  PixelLink,
 } from '@/lib/pixel-icons-extra';
 
 const navGroups = [
@@ -70,6 +71,7 @@ const navGroups = [
     label: 'Knowledge',
     items: [
       { href: '/projects', label: 'Projects', icon: PixelProjects },
+      { href: '/links', label: 'Links', icon: PixelLink },
       { href: '/portfolio', label: 'Portfolio', icon: PixelPortfolio },
       { href: '/memory', label: 'Memory', icon: PixelMemory },
       { href: '/docs', label: 'Docs', icon: PixelDocs },
