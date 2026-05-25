@@ -50,20 +50,6 @@ const agents: Agent[] = [
     model: 'deepseek-v4-pro:cloud',
     runtime: 'isolated cron',
   },
-  {
-    id: 'daily_briefing',
-    name: 'Daily Briefing',
-    type: 'scout',
-    role: 'Calendar Intelligence',
-    status: 'idle',
-    hp: 100,
-    mission: 'Mon-Fri 8AM · iCloud CalDAV · Today + 2-day lookahead',
-    level: 5,
-    xp: 45,
-    spec: 'iCloud CalDAV · Apple Calendar · Telegram delivery',
-    model: 'deepseek-v4-pro:cloud',
-    runtime: 'isolated cron',
-  },
 ];
 
 const statusColors: Record<string, string> = {
