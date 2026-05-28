@@ -398,3 +398,28 @@ export const PixelLink: React.FC<PixelIconProps> = ({ size = 24, className }) =>
     <rect x="6" y="8" width="4" height="1" fill="currentColor" opacity="0.15" />
   </svg>
 );
+
+export const PixelDocker: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    {/* Whale body — stacked boxes */}
+    <rect x="4" y="6" width="8" height="6" fill="currentColor" opacity="0.2" />
+    <rect x="3" y="7" width="10" height="4" fill="currentColor" opacity="0.15" />
+    {/* Whale tail (right) */}
+    <rect x="13" y="5" width="2" height="1" fill="currentColor" opacity="0.5" />
+    <rect x="14" y="4" width="1" height="1" fill="currentColor" />
+    <rect x="14" y="6" width="1" height="1" fill="currentColor" />
+    <rect x="13" y="7" width="1" height="1" fill="currentColor" opacity="0.6" />
+    {/* Whale head (left) */}
+    <rect x="1" y="7" width="2" height="4" fill="currentColor" opacity="0.5" />
+    <rect x="0" y="8" width="1" height="2" fill="currentColor" />
+    {/* Water waves */}
+    <rect x="5" y="4" width="2" height="1" fill="currentColor" opacity="0.3" />
+    <rect x="7" y="3" width="2" height="1" fill="currentColor" opacity="0.4" />
+    <rect x="9" y="4" width="2" height="1" fill="currentColor" opacity="0.3" />
+    <rect x="4" y="5" width="1" height="1" fill="currentColor" opacity="0.2" />
+    <rect x="11" y="5" width="1" height="1" fill="currentColor" opacity="0.2" />
+    {/* Container dots on whale */}
+    <rect x="5" y="8" width="2" height="2" fill="currentColor" opacity="0.5" />
+    <rect x="9" y="8" width="2" height="2" fill="currentColor" opacity="0.4" />
+  </svg>
+);
