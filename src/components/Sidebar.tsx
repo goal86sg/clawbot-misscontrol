@@ -37,6 +37,7 @@ import {
   PixelJournal,
   PixelLink,
   PixelDocker,
+  PixelSnippets,
 } from '@/lib/pixel-icons-extra';
 
 const navGroups = [
@@ -73,6 +74,7 @@ const navGroups = [
     label: 'Knowledge',
     items: [
       { href: '/projects', label: 'Projects', icon: PixelProjects },
+      { href: '/snippets', label: 'Snippets', icon: PixelSnippets },
       { href: '/links', label: 'Links', icon: PixelLink },
       { href: '/portfolio', label: 'Portfolio', icon: PixelPortfolio },
       { href: '/memory', label: 'Memory', icon: PixelMemory },
@@ -165,7 +167,7 @@ export const Sidebar: React.FC = () => {
             <rect x="3" y="0" width="2" height="8" fill="currentColor" />
             <rect x="6" y="2" width="2" height="4" fill="currentColor" />
           </svg>
-          <span className="text-[9px] text-gray-400">v2.8.0 · 31 screens</span>
+          <span className="text-[9px] text-gray-400">v2.8.1 · 32 screens</span>
         </div>
       </div>
     </aside>
