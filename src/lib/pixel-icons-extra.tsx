@@ -448,3 +448,26 @@ export const PixelSnippets: React.FC<PixelIconProps> = ({ size = 24, className }
     <rect x="13" y="9" width="1" height="1" fill="currentColor" opacity="0.5" />
   </svg>
 );
+
+export const PixelSleep: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    {/* Moon crescent */}
+    <rect x="3" y="2" width="8" height="8" fill="currentColor" opacity="0.2" />
+    <rect x="4" y="3" width="6" height="6" fill="currentColor" opacity="0.3" />
+    <rect x="5" y="4" width="4" height="4" fill="currentColor" opacity="0.4" />
+    {/* Moon bite */}
+    <rect x="9" y="4" width="3" height="3" fill="white" />
+    {/* Stars */}
+    <rect x="12" y="1" width="1" height="1" fill="currentColor" opacity="0.5" />
+    <rect x="13" y="3" width="1" height="1" fill="currentColor" opacity="0.4" />
+    <rect x="11" y="5" width="1" height="1" fill="currentColor" opacity="0.5" />
+    <rect x="13" y="7" width="1" height="1" fill="currentColor" opacity="0.3" />
+    {/* Z's for sleep */}
+    <rect x="10" y="6" width="2" height="1" fill="currentColor" opacity="0.4" />
+    <rect x="11" y="6" width="1" height="1" fill="currentColor" opacity="0.3" />
+    <rect x="10" y="7" width="1" height="1" fill="currentColor" opacity="0.4" />
+    <rect x="12" y="9" width="2" height="1" fill="currentColor" opacity="0.3" />
+    <rect x="13" y="9" width="1" height="1" fill="currentColor" opacity="0.2" />
+    <rect x="12" y="10" width="1" height="1" fill="currentColor" opacity="0.3" />
+  </svg>
+);
