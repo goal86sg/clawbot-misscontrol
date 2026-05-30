@@ -471,3 +471,25 @@ export const PixelSleep: React.FC<PixelIconProps> = ({ size = 24, className }) =
     <rect x="12" y="10" width="1" height="1" fill="currentColor" opacity="0.3" />
   </svg>
 );
+
+export const PixelReading: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    {/* Open book with pages */}
+    <rect x="1" y="3" width="6" height="10" fill="currentColor" opacity="0.15" />
+    <rect x="9" y="3" width="6" height="10" fill="currentColor" opacity="0.1" />
+    {/* Spine */}
+    <rect x="7" y="2" width="2" height="12" fill="currentColor" opacity="0.3" />
+    {/* Left page content */}
+    <rect x="2" y="5" width="4" height="1" fill="currentColor" opacity="0.5" />
+    <rect x="2" y="7" width="3" height="1" fill="currentColor" opacity="0.4" />
+    <rect x="2" y="9" width="4" height="1" fill="currentColor" opacity="0.3" />
+    <rect x="2" y="11" width="3" height="1" fill="currentColor" opacity="0.25" />
+    {/* Right page content */}
+    <rect x="10" y="5" width="4" height="1" fill="currentColor" opacity="0.4" />
+    <rect x="10" y="7" width="3" height="1" fill="currentColor" opacity="0.35" />
+    <rect x="10" y="9" width="4" height="1" fill="currentColor" opacity="0.25" />
+    {/* Bookmark ribbon */}
+    <rect x="12" y="1" width="1" height="5" fill="currentColor" opacity="0.4" />
+    <rect x="11" y="5" width="2" height="1" fill="currentColor" opacity="0.3" />
+  </svg>
+);

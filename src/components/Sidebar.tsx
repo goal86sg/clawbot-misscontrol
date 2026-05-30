@@ -39,6 +39,7 @@ import {
   PixelDocker,
   PixelSnippets,
   PixelSleep,
+  PixelReading,
 } from '@/lib/pixel-icons-extra';
 
 const navGroups = [
@@ -58,6 +59,7 @@ const navGroups = [
       { href: '/habits', label: 'Habits', icon: PixelHabits },
       { href: '/journal', label: 'Journal', icon: PixelJournal },
       { href: '/sleep', label: 'Sleep', icon: PixelSleep },
+      { href: '/reading', label: 'Reading', icon: PixelReading },
     ],
   },
   {
