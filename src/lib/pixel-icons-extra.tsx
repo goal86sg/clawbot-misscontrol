@@ -493,3 +493,27 @@ export const PixelReading: React.FC<PixelIconProps> = ({ size = 24, className })
     <rect x="11" y="5" width="2" height="1" fill="currentColor" opacity="0.3" />
   </svg>
 );
+
+export const PixelGit: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    {/* Git branch visualization */}
+    <rect x="1" y="4" width="4" height="8" fill="currentColor" opacity="0.4" />
+    <rect x="2" y="5" width="2" height="6" fill="currentColor" />
+    {/* Main branch stem */}
+    <rect x="2" y="3" width="2" height="2" fill="currentColor" opacity="0.5" />
+    <rect x="2" y="11" width="2" height="2" fill="currentColor" opacity="0.5" />
+    {/* Feature branch */}
+    <rect x="6" y="1" width="4" height="8" fill="currentColor" opacity="0.3" />
+    <rect x="7" y="2" width="2" height="6" fill="currentColor" opacity="0.4" />
+    {/* Merge / feature branch head */}
+    <rect x="7" y="0" width="2" height="2" fill="currentColor" opacity="0.6" />
+    {/* Second branch */}
+    <rect x="11" y="3" width="4" height="10" fill="currentColor" opacity="0.2" />
+    <rect x="12" y="4" width="2" height="8" fill="currentColor" opacity="0.3" />
+    <rect x="12" y="12" width="2" height="2" fill="currentColor" opacity="0.4" />
+    {/* Branch nodes (commit dots) */}
+    <rect x="2.5" y="2.5" width="1" height="1" fill="white" opacity="0.8" />
+    <rect x="7.5" y="-0.5" width="1" height="1" fill="white" opacity="0.7" />
+    <rect x="12.5" y="2.5" width="1" height="1" fill="white" opacity="0.6" />
+  </svg>
+);
