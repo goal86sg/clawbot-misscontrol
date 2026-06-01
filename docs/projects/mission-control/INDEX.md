@@ -2,21 +2,22 @@
 
 ## Overview
 
-Pixel art dashboard with 35 screens, Next.js + Tailwind. Desss Lee's personal command center.
+Pixel art dashboard with 36 screens, Next.js + Tailwind. Desss Lee's personal command center.
 
 ## Details
 
 - **Location:** `mission-control/`
 - **Tech:** Next.js 16, TypeScript, Tailwind CSS, pixel art SVG icons
-- **Screens:** 35 (as of May 31, 2026)
-- **Version:** v2.11.0
+- **Screens:** 36 (as of June 1, 2026)
+- **Version:** v2.12.0
 - **Build:** Clean, all 35 routes static ✓
 
 ## Screens (35 total)
 
 ### Core
-1. Dashboard — overview stats, active agents, mission log
-2. Standup — daily briefing: tasks, events, activity, quote
+1. **Briefing** — daily morning overview: greeting, commute, tasks, events, goals, habits
+2. Dashboard — overview stats, active agents, mission log
+3. Standup — daily briefing: tasks, events, activity, quote
 3. Vitals — CPU/RAM/disk real-time monitoring
 4. Weather — current conditions + 5-day forecast
 5. Commute — MRT/LRT route planner with live crowd data
@@ -109,6 +110,7 @@ npm run build  # production build
 
 | Night | Screen | Description |
 |-------|--------|-------------|
+| **Jun 1** | **36** | **Daily Briefing — morning overview: greeting, commute, tasks, events, goals, habits** |
 | May 31 | 35 | Git Activity — commits, repositories, contribution graph, PR board |
 | May 30 | 34 | Reading Tracker — books, articles, papers, courses with streaks and tags |
 | May 29 | 33 | Sleep & Energy Tracker — weekly bar chart, quality trends, 7-day average |
