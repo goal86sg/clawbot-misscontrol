@@ -41,12 +41,14 @@ import {
   PixelSleep,
   PixelReading,
   PixelGit,
+  PixelBriefing,
 } from '@/lib/pixel-icons-extra';
 
 const navGroups = [
   {
     label: 'Overview',
     items: [
+      { href: '/briefing', label: 'Briefing', icon: PixelBriefing },
       { href: '/standup', label: 'Standup', icon: PixelStandup },
       { href: '/', label: 'Dashboard', icon: PixelHome },
       { href: '/vitals', label: 'Vitals', icon: PixelHeart },

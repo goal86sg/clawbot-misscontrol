@@ -517,3 +517,23 @@ export const PixelGit: React.FC<PixelIconProps> = ({ size = 24, className }) => 
     <rect x="12.5" y="2.5" width="1" height="1" fill="white" opacity="0.6" />
   </svg>
 );
+
+export const PixelBriefing: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    {/* Sun / morning rays */}
+    <rect x="7" y="0" width="2" height="2" fill="currentColor" />
+    <rect x="7" y="14" width="2" height="2" fill="currentColor" opacity="0.4" />
+    <rect x="0" y="7" width="2" height="2" fill="currentColor" opacity="0.4" />
+    <rect x="14" y="7" width="2" height="2" fill="currentColor" opacity="0.4" />
+    {/* Coffee cup */}
+    <rect x="4" y="6" width="8" height="7" fill="currentColor" opacity="0.15" />
+    <rect x="5" y="7" width="6" height="5" fill="currentColor" />
+    <rect x="12" y="8" width="2" height="1" fill="currentColor" />
+    <rect x="13" y="9" width="1" height="2" fill="currentColor" opacity="0.5" />
+    <rect x="5" y="6" width="6" height="1" fill="currentColor" opacity="0.5" />
+    {/* Steam */}
+    <rect x="6" y="4" width="1" height="2" fill="currentColor" opacity="0.3" />
+    <rect x="8" y="3" width="1" height="3" fill="currentColor" opacity="0.2" />
+    <rect x="10" y="4" width="1" height="2" fill="currentColor" opacity="0.3" />
+  </svg>
+);
