@@ -42,6 +42,7 @@ import {
   PixelReading,
   PixelGit,
   PixelBriefing,
+  PixelDumbbell,
 } from '@/lib/pixel-icons-extra';
 
 const navGroups = [
@@ -60,6 +61,7 @@ const navGroups = [
       { href: '/goals', label: 'Goals', icon: PixelGoals },
       { href: '/focus', label: 'Focus', icon: PixelFocus },
       { href: '/habits', label: 'Habits', icon: PixelHabits },
+      { href: '/workout', label: 'Workout', icon: PixelDumbbell },
       { href: '/journal', label: 'Journal', icon: PixelJournal },
       { href: '/sleep', label: 'Sleep', icon: PixelSleep },
       { href: '/reading', label: 'Reading', icon: PixelReading },
@@ -175,7 +177,7 @@ export const Sidebar: React.FC = () => {
             <rect x="3" y="0" width="2" height="8" fill="currentColor" />
             <rect x="6" y="2" width="2" height="4" fill="currentColor" />
           </svg>
-          <span className="text-[9px] text-gray-400">v2.11.0 · 35 screens</span>
+          <span className="text-[9px] text-gray-400">v2.12.0 · 37 screens</span>
         </div>
       </div>
     </aside>

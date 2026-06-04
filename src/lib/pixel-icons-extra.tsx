@@ -537,3 +537,24 @@ export const PixelBriefing: React.FC<PixelIconProps> = ({ size = 24, className }
     <rect x="10" y="4" width="1" height="2" fill="currentColor" opacity="0.3" />
   </svg>
 );
+
+export const PixelDumbbell: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    {/* Left weight plate */}
+    <rect x="1" y="5" width="2" height="6" fill="currentColor" opacity="0.4" />
+    <rect x="0" y="6" width="1" height="4" fill="currentColor" />
+    {/* Bar */}
+    <rect x="2" y="7" width="12" height="2" fill="currentColor" />
+    {/* Right weight plate */}
+    <rect x="13" y="5" width="2" height="6" fill="currentColor" opacity="0.4" />
+    <rect x="15" y="6" width="1" height="4" fill="currentColor" />
+    {/* Grip bands */}
+    <rect x="5" y="6" width="1" height="4" fill="currentColor" opacity="0.5" />
+    <rect x="10" y="6" width="1" height="4" fill="currentColor" opacity="0.5" />
+    {/* Top/bottom accents */}
+    <rect x="1" y="4" width="2" height="1" fill="currentColor" opacity="0.3" />
+    <rect x="13" y="4" width="2" height="1" fill="currentColor" opacity="0.3" />
+    <rect x="1" y="11" width="2" height="1" fill="currentColor" opacity="0.3" />
+    <rect x="13" y="11" width="2" height="1" fill="currentColor" opacity="0.3" />
+  </svg>
+);
