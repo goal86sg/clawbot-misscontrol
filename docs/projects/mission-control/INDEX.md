@@ -2,17 +2,17 @@
 
 ## Overview
 
-Pixel art dashboard with 36 screens, Next.js + Tailwind. Desss Lee's personal command center.
+Pixel art dashboard with 37 screens, Next.js + Tailwind. Desss Lee's personal command center.
 
 ## Details
 
 - **Location:** `mission-control/`
 - **Tech:** Next.js 16, TypeScript, Tailwind CSS, pixel art SVG icons
-- **Screens:** 36 (as of June 1, 2026)
+- **Screens:** 37 (as of June 4, 2026)
 - **Version:** v2.12.0
-- **Build:** Clean, all 35 routes static ✓
+- **Build:** Clean, all 37 routes static ✓
 
-## Screens (35 total)
+## Screens (37 total)
 
 ### Core
 1. **Briefing** — daily morning overview: greeting, commute, tasks, events, goals, habits
@@ -60,14 +60,15 @@ Pixel art dashboard with 36 screens, Next.js + Tailwind. Desss Lee's personal co
 32. Team — team management
 33. Office — office management
 34. Portfolio — investment holdings tracker
-35. Settings — app settings
+36. **Workout** — workout tracker: run/gym/hiit sessions, 500km yearly goal, personal records, energy tracking
+37. Settings — app settings
 
 ## Version History
 
 | Version | Date | Change |
 |---------|------|--------|
+| v2.12.0 | Jun 4 | 37 screens, Workout Tracker — run/gym/hiit sessions, 500km goal, personal records |
 | v2.11.0 | May 31 | 35 screens, Git Activity — commits, repos, contribution graph |
-| v2.10.0 | May 30 | 34 screens, Reading Tracker — books/articles/papers/courses |
 | v2.9.0 | May 29 | 33 screens, Sleep & Energy Tracker |
 | v2.9.0 | May 28 | 32 screens, Snippets — code snippet library |
 | v2.8.0 | May 24 | 32 screens, Links — pixel bookmark hub |
@@ -110,6 +111,7 @@ npm run build  # production build
 
 | Night | Screen | Description |
 |-------|--------|-------------|
+| **Jun 4** | **37** | **Workout Tracker — run/gym/hiit sessions, 500km yearly goal, personal records, energy tracking** |
 | **Jun 1** | **36** | **Daily Briefing — morning overview: greeting, commute, tasks, events, goals, habits** |
 | May 31 | 35 | Git Activity — commits, repositories, contribution graph, PR board |
 | May 30 | 34 | Reading Tracker — books, articles, papers, courses with streaks and tags |
