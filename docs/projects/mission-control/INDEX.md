@@ -8,11 +8,11 @@ Pixel art dashboard with 37 screens, Next.js + Tailwind. Desss Lee's personal co
 
 - **Location:** `mission-control/`
 - **Tech:** Next.js 16, TypeScript, Tailwind CSS, pixel art SVG icons
-- **Screens:** 37 (as of June 4, 2026)
-- **Version:** v2.12.0
+- **Screens:** 38 (as of June 5, 2026)
+- **Version:** v2.13.0
 - **Build:** Clean, all 37 routes static ✓
 
-## Screens (37 total)
+## Screens (38 total)
 
 ### Core
 1. **Briefing** — daily morning overview: greeting, commute, tasks, events, goals, habits
@@ -21,6 +21,7 @@ Pixel art dashboard with 37 screens, Next.js + Tailwind. Desss Lee's personal co
 3. Vitals — CPU/RAM/disk real-time monitoring
 4. Weather — current conditions + 5-day forecast
 5. Commute — MRT/LRT route planner with live crowd data
+6. **Day Review** — end-of-day summary: energy, mood, tasks, wins, lessons, gratitude, health metrics, tomorrow's goals
 
 ### Finance
 6. Spending — expense tracker with category budgets
@@ -60,13 +61,14 @@ Pixel art dashboard with 37 screens, Next.js + Tailwind. Desss Lee's personal co
 32. Team — team management
 33. Office — office management
 34. Portfolio — investment holdings tracker
-36. **Workout** — workout tracker: run/gym/hiit sessions, 500km yearly goal, personal records, energy tracking
-37. Settings — app settings
+35. **Workout** — workout tracker: run/gym/hiit sessions, 500km yearly goal, personal records, energy tracking
+38. Settings — app settings
 
 ## Version History
 
 | Version | Date | Change |
 |---------|------|--------|
+| v2.13.0 | Jun 5 | 38 screens, Day in Review — end-of-day summary with energy, mood, tasks, wins, lessons, gratitude, health metrics, and animated pixel sunset footer |
 | v2.12.0 | Jun 4 | 37 screens, Workout Tracker — run/gym/hiit sessions, 500km goal, personal records |
 | v2.11.0 | May 31 | 35 screens, Git Activity — commits, repos, contribution graph |
 | v2.9.0 | May 29 | 33 screens, Sleep & Energy Tracker |
@@ -102,7 +104,7 @@ npm run build  # production build
 
 - `src/app/(dashboard)/` — all screen pages
 - `src/components/Sidebar.tsx` — navigation (updated on each new screen)
-- `src/lib/pixel-icons.tsx` — core pixel icons
+- `src/lib/pixel-icons.tsx` — core pixel icons (including PixelSunset)
 - `src/lib/pixel-icons-extra.tsx` — extended icons (one per screen)
 - `src/components/PixelProgress.tsx` — progress bar component
 - `src/components/PixelAvatar.tsx` — avatar component
@@ -111,6 +113,7 @@ npm run build  # production build
 
 | Night | Screen | Description |
 |-------|--------|-------------|
+| **Jun 5** | **38** | **Day in Review — end-of-day summary: energy, mood, tasks, wins, lessons, gratitude, health metrics, tomorrow's goals, animated pixel sunset footer** |
 | **Jun 4** | **37** | **Workout Tracker — run/gym/hiit sessions, 500km yearly goal, personal records, energy tracking** |
 | **Jun 1** | **36** | **Daily Briefing — morning overview: greeting, commute, tasks, events, goals, habits** |
 | May 31 | 35 | Git Activity — commits, repositories, contribution graph, PR board |

@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { PixelClock, PixelHeart, PixelAlert, PixelSparkle, PixelCheck, PixelActivity } from '@/lib/pixel-icons';
-import { PixelHabits, PixelSleep } from '@/lib/pixel-icons-extra';
+import { PixelClock, PixelHeart, PixelAlert, PixelSparkle, PixelCheck } from '@/lib/pixel-icons';
+import { PixelHabits, PixelSleep, PixelActivity } from '@/lib/pixel-icons-extra';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 

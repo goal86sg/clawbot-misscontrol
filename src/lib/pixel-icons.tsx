@@ -116,3 +116,24 @@ export const PixelClock: React.FC<PixelIconProps> = ({ size = 16, className }) =
     <rect x="3" y="3" width="1" height="1" fill="currentColor" />
   </svg>
 );
+
+export const PixelSunset: React.FC<PixelIconProps> = ({ size = 16, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    {/* Horizon line */}
+    <rect x="0" y="10" width="16" height="1" fill="currentColor" opacity="0.2" />
+    {/* Sun */}
+    <rect x="6" y="4" width="4" height="2" fill="currentColor" />
+    <rect x="7" y="3" width="2" height="1" fill="currentColor" opacity="0.6" />
+    <rect x="5" y="5" width="1" height="1" fill="currentColor" opacity="0.5" />
+    <rect x="10" y="5" width="1" height="1" fill="currentColor" opacity="0.5" />
+    {/* Sun rays */}
+    <rect x="7" y="1" width="2" height="1" fill="currentColor" opacity="0.3" />
+    <rect x="3" y="6" width="1" height="1" fill="currentColor" opacity="0.3" />
+    <rect x="12" y="6" width="1" height="1" fill="currentColor" opacity="0.3" />
+    {/* Mountains / hills */}
+    <rect x="0" y="11" width="5" height="4" fill="currentColor" opacity="0.15" />
+    <rect x="11" y="11" width="5" height="4" fill="currentColor" opacity="0.15" />
+    <rect x="2" y="12" width="3" height="3" fill="currentColor" opacity="0.1" />
+    <rect x="9" y="12" width="4" height="3" fill="currentColor" opacity="0.1" />
+  </svg>
+);
