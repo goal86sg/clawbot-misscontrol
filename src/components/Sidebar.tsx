@@ -43,6 +43,7 @@ import {
   PixelGit,
   PixelBriefing,
   PixelDumbbell,
+  PixelWeekly,
 } from '@/lib/pixel-icons-extra';
 import { PixelSunset } from '@/lib/pixel-icons';
 
@@ -52,6 +53,7 @@ const navGroups = [
     items: [
       { href: '/briefing', label: 'Briefing', icon: PixelBriefing },
       { href: '/dayreview', label: 'Day Review', icon: PixelSunset },
+      { href: '/weekly', label: 'Weekly Review', icon: PixelWeekly },
       { href: '/standup', label: 'Standup', icon: PixelStandup },
       { href: '/', label: 'Dashboard', icon: PixelHome },
       { href: '/vitals', label: 'Vitals', icon: PixelHeart },
@@ -179,7 +181,7 @@ export const Sidebar: React.FC = () => {
             <rect x="3" y="0" width="2" height="8" fill="currentColor" />
             <rect x="6" y="2" width="2" height="4" fill="currentColor" />
           </svg>
-          <span className="text-[9px] text-gray-400">v2.13.0 · 38 screens</span>
+          <span className="text-[9px] text-gray-400">v2.14.0 · 39 screens</span>
         </div>
       </div>
     </aside>
