@@ -44,6 +44,7 @@ import {
   PixelBriefing,
   PixelDumbbell,
   PixelWeekly,
+  PixelOpsCenter,
 } from '@/lib/pixel-icons-extra';
 import { PixelSunset } from '@/lib/pixel-icons';
 
@@ -75,6 +76,7 @@ const navGroups = [
   {
     label: 'Operations',
     items: [
+      { href: '/ops', label: 'Ops Center', icon: PixelOpsCenter },
       { href: '/monitor', label: 'Monitor', icon: PixelMonitor },
       { href: '/docker', label: 'Docker', icon: PixelDocker },
       { href: '/tasks', label: 'Tasks', icon: PixelTasks },
