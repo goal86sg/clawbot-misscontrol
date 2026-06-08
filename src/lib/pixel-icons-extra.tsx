@@ -642,3 +642,23 @@ export const PixelAgents: React.FC<PixelIconProps> = ({ size = 24, className }) 
     <rect x="12" y="10" width="1" height="3" fill="currentColor" opacity="0.2" />
   </svg>
 );
+
+export const PixelVitals: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    {/* ECG / heartbeat line */}
+    <rect x="1" y="7" width="2" height="2" fill="currentColor" opacity="0.3" />
+    <rect x="3" y="6" width="1" height="1" fill="currentColor" />
+    <rect x="4" y="3" width="1" height="3" fill="currentColor" />
+    <rect x="5" y="5" width="1" height="3" fill="currentColor" />
+    <rect x="6" y="2" width="1" height="3" fill="currentColor" />
+    <rect x="7" y="6" width="2" height="4" fill="currentColor" />
+    <rect x="9" y="4" width="1" height="2" fill="currentColor" />
+    <rect x="10" y="2" width="1" height="2" fill="currentColor" />
+    <rect x="11" y="3" width="1" height="1" fill="currentColor" />
+    <rect x="12" y="6" width="1" height="1" fill="currentColor" />
+    <rect x="13" y="7" width="2" height="2" fill="currentColor" opacity="0.3" />
+    {/* Pulse dots */}
+    <rect x="7" y="11" width="2" height="1" fill="currentColor" opacity="0.4" />
+    <rect x="7" y="12" width="2" height="2" fill="currentColor" opacity="0.2" />
+  </svg>
+);
