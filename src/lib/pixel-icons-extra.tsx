@@ -697,3 +697,21 @@ export const PixelFinance: React.FC<PixelIconProps> = ({ size = 24, className })
     <rect x="5" y="10" width="2" height="1" fill="currentColor" opacity="0.4" />
   </svg>
 );
+
+export const PixelYearInPixels: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    {/* Calendar grid */}
+    <rect x="1" y="1" width="14" height="14" fill="currentColor" opacity="0.1" />
+    <rect x="1" y="1" width="14" height="3" fill="currentColor" opacity="0.25" />
+    {/* Grid dots (pixel months) */}
+    <rect x="3" y="5" width="3" height="3" fill="currentColor" opacity="0.4" />
+    <rect x="7" y="5" width="3" height="3" fill="currentColor" opacity="0.6" />
+    <rect x="11" y="5" width="2" height="3" fill="currentColor" opacity="0.3" />
+    <rect x="3" y="9" width="3" height="3" fill="currentColor" opacity="0.5" />
+    <rect x="7" y="9" width="3" height="3" fill="currentColor" opacity="0.2" />
+    <rect x="11" y="9" width="2" height="3" fill="currentColor" opacity="0.7" />
+    {/* Calendar pins */}
+    <rect x="3" y="0" width="2" height="3" fill="currentColor" opacity="0.3" />
+    <rect x="11" y="0" width="2" height="3" fill="currentColor" opacity="0.3" />
+  </svg>
+);

@@ -46,6 +46,7 @@ import {
   PixelWeekly,
   PixelOpsCenter,
   PixelDevTools,
+  PixelYearInPixels,
 } from '@/lib/pixel-icons-extra';
 import { PixelSunset } from '@/lib/pixel-icons';
 import { PixelFinance } from '@/lib/pixel-icons-extra';
@@ -74,6 +75,7 @@ const navGroups = [
       { href: '/sleep', label: 'Sleep', icon: PixelSleep },
       { href: '/reading', label: 'Reading', icon: PixelReading },
       { href: '/git', label: 'Git', icon: PixelGit },
+      { href: '/year-in-pixels', label: 'Year in Pixels', icon: PixelYearInPixels },
     ],
   },
   {
@@ -187,7 +189,7 @@ export const Sidebar: React.FC = () => {
             <rect x="3" y="0" width="2" height="8" fill="currentColor" />
             <rect x="6" y="2" width="2" height="4" fill="currentColor" />
           </svg>
-          <span className="text-[9px] text-gray-400">v2.15.0 · 41 screens</span>
+          <span className="text-[9px] text-gray-400">v2.16.0 · 42 screens</span>
         </div>
       </div>
     </aside>
