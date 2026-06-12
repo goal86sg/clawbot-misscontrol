@@ -45,8 +45,10 @@ import {
   PixelDumbbell,
   PixelWeekly,
   PixelOpsCenter,
+  PixelDevTools,
 } from '@/lib/pixel-icons-extra';
 import { PixelSunset } from '@/lib/pixel-icons';
+import { PixelFinance } from '@/lib/pixel-icons-extra';
 
 const navGroups = [
   {
@@ -65,6 +67,7 @@ const navGroups = [
       { href: '/income', label: 'Income', icon: PixelIncome },
       { href: '/goals', label: 'Goals', icon: PixelGoals },
       { href: '/focus', label: 'Focus', icon: PixelFocus },
+      { href: '/finance', label: 'Finance', icon: PixelFinance },
       { href: '/habits', label: 'Habits', icon: PixelHabits },
       { href: '/workout', label: 'Workout', icon: PixelDumbbell },
       { href: '/journal', label: 'Journal', icon: PixelJournal },
@@ -106,6 +109,7 @@ const navGroups = [
       { href: '/team', label: 'Team', icon: PixelTeam },
       { href: '/office', label: 'Office', icon: PixelOffice },
       { href: '/terminal', label: 'Terminal', icon: PixelTerminal },
+      { href: '/devtools', label: 'Dev Tools', icon: PixelDevTools },
       { href: '/settings', label: 'Settings', icon: PixelSettings },
     ],
   },

@@ -662,3 +662,38 @@ export const PixelVitals: React.FC<PixelIconProps> = ({ size = 24, className }) 
     <rect x="7" y="12" width="2" height="2" fill="currentColor" opacity="0.2" />
   </svg>
 );
+
+export const PixelDevTools: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    {/* Wrench body */}
+    <rect x="1" y="5" width="6" height="3" fill="currentColor" opacity="0.5" />
+    <rect x="6" y="4" width="2" height="2" fill="currentColor" />
+    <rect x="7" y="6" width="5" height="2" fill="currentColor" />
+    <rect x="11" y="7" width="3" height="3" fill="currentColor" opacity="0.7" />
+    {/* Gear teeth */}
+    <rect x="4" y="2" width="2" height="1" fill="currentColor" opacity="0.4" />
+    <rect x="3" y="8" width="2" height="1" fill="currentColor" opacity="0.4" />
+    {/* Sparkle */}
+    <rect x="8" y="2" width="1" height="1" fill="currentColor" />
+    <rect x="9" y="1" width="1" height="1" fill="currentColor" opacity="0.5" />
+    <rect x="10" y="2" width="1" height="1" fill="currentColor" opacity="0.3" />
+  </svg>
+);
+
+export const PixelFinance: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    {/* Wallet body */}
+    <rect x="1" y="4" width="10" height="8" fill="currentColor" opacity="0.2" />
+    <rect x="2" y="5" width="9" height="7" fill="currentColor" opacity="0.3" />
+    {/* Wallet flap */}
+    <rect x="1" y="4" width="10" height="3" fill="currentColor" />
+    {/* Dollar sign */}
+    <rect x="9" y="5" width="2" height="2" fill="white" opacity="0.7" />
+    <rect x="9" y="8" width="2" height="2" fill="white" opacity="0.7" />
+    <rect x="8" y="6" width="1" height="1" fill="white" opacity="0.5" />
+    <rect x="8" y="9" width="1" height="1" fill="white" opacity="0.5" />
+    {/* Coins */}
+    <rect x="3" y="9" width="3" height="2" fill="currentColor" opacity="0.5" />
+    <rect x="5" y="10" width="2" height="1" fill="currentColor" opacity="0.4" />
+  </svg>
+);
