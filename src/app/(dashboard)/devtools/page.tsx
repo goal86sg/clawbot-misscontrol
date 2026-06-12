@@ -1,5 +1,4 @@
 'use client';
-
 import React, { useState, useEffect } from 'react';
 import { PixelTerminal, PixelSparkle, PixelCheck, PixelAlert } from '@/lib/pixel-icons';
 
@@ -307,7 +306,8 @@ function HashTool() {
           A = D;
           D = C;
           C = B;
-          B = (B + ((f << S[j % 4 ? (j % 4 > 1 ? 30 : 26 : 25)) | (f >>> (32 - (S[j % 4 ? (j % 4 > 1 ? 30 : 26) : 25))))) >>> 0;
+          const shiftAmt = S[j % 4] ? (j % 4 > 1 ? 30 : 26) : 25;
+          B = (B + ((f << shiftAmt) | (f >>> (32 - shiftAmt)))) >>> 0;
         }
         
         A = (A + AA) >>> 0;
@@ -668,7 +668,7 @@ export default function DevToolsPage() {
         <div className="flex items-center gap-2">
           <div className="flex items-center gap-1 text-[10px] font-mono text-gray-400 bg-gray-100 px-2 py-1 rounded">
             <PixelTerminal size={12} />
-            <span>{Object.keys(localStorage).length} tools used</span>
+            <span>{typeof window !== 'undefined' ? Object.keys(localStorage).length : 0} tools used</span>
           </div>
         </div>
       </div>

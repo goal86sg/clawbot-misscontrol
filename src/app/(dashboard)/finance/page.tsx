@@ -290,7 +290,7 @@ export default function FinancePage() {
   }, []);
 
   const totalIncome = incomeStreams.reduce((s, i) => s + i.amount, 0);
-  const totalPassive = incomeStreams.filter(i => i.frequency !== 'one-time' && i.name !== 'Salary').reduce((s, i) => s + i.amount, 0);
+  const totalPassive = incomeStreams.filter(i => i.name !== 'Salary').reduce((s, i) => s + i.amount, 0);
   const monthlyExpenses = 6250;
   const savingsRate = Math.round(((totalIncome - monthlyExpenses) / totalIncome) * 100);
   const netWorth = assets.reduce((s, a) => s + a.value, 0);
