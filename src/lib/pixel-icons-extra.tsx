@@ -750,3 +750,26 @@ export const PixelIncidents: React.FC<PixelIconProps> = ({ size = 24, className 
     <rect x="12" y="13" width="2" height="2" fill="currentColor" opacity="0.3" />
   </svg>
 );
+
+export const PixelApiMonitor: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    {/* Server rack */}
+    <rect x="2" y="2" width="12" height="12" fill="currentColor" opacity="0.1" />
+    <rect x="2" y="2" width="12" height="2" fill="currentColor" opacity="0.4" />
+    {/* Server lights */}
+    <rect x="4" y="3" width="2" height="1" fill="currentColor" />
+    <rect x="11" y="3" width="1" height="1" fill="currentColor" opacity="0.6" />
+    {/* Middle section */}
+    <rect x="4" y="6" width="2" height="1" fill="currentColor" opacity="0.5" />
+    <rect x="11" y="6" width="1" height="1" fill="currentColor" opacity="0.4" />
+    {/* Wave/graph line */}
+    <rect x="4" y="9" width="1" height="2" fill="currentColor" />
+    <rect x="6" y="8" width="1" height="3" fill="currentColor" />
+    <rect x="8" y="7" width="1" height="4" fill="currentColor" />
+    <rect x="10" y="8" width="1" height="3" fill="currentColor" />
+    <rect x="12" y="9" width="1" height="2" fill="currentColor" opacity="0.5" />
+    {/* Bottom bar */}
+    <rect x="4" y="12" width="2" height="1" fill="currentColor" opacity="0.3" />
+    <rect x="11" y="12" width="1" height="1" fill="currentColor" opacity="0.3" />
+  </svg>
+);

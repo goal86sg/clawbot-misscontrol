@@ -49,6 +49,7 @@ import {
   PixelYearInPixels,
   PixelBuilds,
   PixelIncidents,
+  PixelApiMonitor,
 } from '@/lib/pixel-icons-extra';
 import { PixelSunset } from '@/lib/pixel-icons';
 import { PixelFinance } from '@/lib/pixel-icons-extra';
@@ -115,6 +116,7 @@ const navGroups = [
       { href: '/terminal', label: 'Terminal', icon: PixelTerminal },
       { href: '/builds', label: 'Builds', icon: PixelBuilds },
       { href: '/incidents', label: 'Incidents', icon: PixelIncidents },
+      { href: '/api-monitor', label: 'API Monitor', icon: PixelApiMonitor },
       { href: '/devtools', label: 'Dev Tools', icon: PixelDevTools },
       { href: '/settings', label: 'Settings', icon: PixelSettings },
     ],
