@@ -61,6 +61,7 @@ const navGroups = [
       { href: '/briefing', label: 'Briefing', icon: PixelBriefing },
       { href: '/dayreview', label: 'Day Review', icon: PixelSunset },
       { href: '/weekly', label: 'Weekly Review', icon: PixelWeekly },
+      { href: '/week-ahead', label: 'Week Ahead', icon: PixelCalendar },
       { href: '/standup', label: 'Standup', icon: PixelStandup },
       { href: '/', label: 'Dashboard', icon: PixelHome },
       { href: '/vitals', label: 'Vitals', icon: PixelHeart },
