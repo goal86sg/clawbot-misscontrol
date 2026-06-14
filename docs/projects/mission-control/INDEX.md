@@ -2,13 +2,13 @@
 
 ## Overview
 
-Pixel art dashboard with 37 screens, Next.js + Tailwind. Desss Lee's personal command center.
+Pixel art dashboard with 49 screens, Next.js + Tailwind. Desss Lee's personal command center.
 
 ## Details
 
 - **Location:** `mission-control/`
 - **Tech:** Next.js 16, TypeScript, Tailwind CSS, pixel art SVG icons
-- **Screens:** 38 (as of June 5, 2026)
+- **Screens:** 49 (as of June 14, 2026)
 - **Version:** v2.13.0
 - **Build:** Clean, all 37 routes static ✓
 
@@ -68,29 +68,25 @@ Pixel art dashboard with 37 screens, Next.js + Tailwind. Desss Lee's personal co
 
 | Version | Date | Change |
 |---------|------|--------|
-| v2.13.0 | Jun 5 | 38 screens, Day in Review — end-of-day summary with energy, mood, tasks, wins, lessons, gratitude, health metrics, and animated pixel sunset footer |
-| v2.12.0 | Jun 4 | 37 screens, Workout Tracker — run/gym/hiit sessions, 500km goal, personal records |
-| v2.11.0 | May 31 | 35 screens, Git Activity — commits, repos, contribution graph |
-| v2.9.0 | May 29 | 33 screens, Sleep & Energy Tracker |
-| v2.9.0 | May 28 | 32 screens, Snippets — code snippet library |
-| v2.8.0 | May 24 | 32 screens, Links — pixel bookmark hub |
-| v2.7.0 | May 22 | 30 screens, Monitor — DevOps dashboard |
-| v2.6.0 | May 18 | 22 screens, spending tracker |
-| v2.5.x | May 17 | Focus timer, income tracker |
-| v2.4.x | May 16 | Commute, weather, standup |
+| v2.22.0 | Jun 14 | 49 screens, Win Wall — pixel art achievement tracker with featured wins, milestone progress bars, category filters, points system, interactive reactions |
+| v2.21.0 | Jun 13 | 48 screens, Week Ahead planner — 7-day grid, goals, focus blocks, energy tracking |
+| v2.20.0 | Jun 13 | 47 screens, Habit Garden — pixel plant growth tracker with 6 growth stages, watering interaction, animated bloom |
+| v2.19.0 | Jun 13 | 44 screens, Skills & Progression System — XP/levels, streaks, category filters, skill cards, quests, leaderboard |
+| v2.18.0 | Jun 12 | 43 screens, API Monitor — endpoint health, latency sparklines, P99/error rates, uptime gauges |
+| v2.17.0 | Jun 12 | 42 screens, Year in Pixels — 365-day pixel grid with color-coded daily mood/workout/happiness/energy |
+| v2.16.0 | Jun 12 | 41 screens, Financial Dashboard — income vs spending, budget categories, savings rate |
+| v2.15.0 | Jun 5 | 38 screens, Day in Review — end-of-day summary with energy, mood, tasks, wins, lessons, gratitude |
 
 ## Recent Commits
 
 | Commit | Description |
 |---------|-------------|
-| `040d046` | 🌙 Nightly build: Git Activity — Screen 35 |
-| `9018c3f` | 🌙 Nightly build: Reading Tracker — Screen 34 |
-| `3d576ab` | docs: add nightly report for sleep tracker build |
-| `35188d4` | 🌙 Nightly build: Sleep & Energy Tracker — Screen 33 |
-| `fe76d07` | 🌙 Nightly build: Snippets — code snippet library (Screen 32) |
-| `5461aa7` | 🌙 Nightly build: Docker — container management screen (Screen 31) |
-| `074143a` | 🌙 Nightly build: Links — pixel bookmark hub (Screen 32) |
-| `cd959f8` | 🌙 Nightly build: Daily Journal — Screen 31 |
+| `098ba8b` | 🌙 Nightly build: Win Wall — Screen 49 |
+| `db5505c` | 🌙 Nightly build: Week Ahead planner — Screen 48 |
+| `3ec53fe` | docs: add Habit Garden nightly report |
+| `9cca509` | 🌙 Nightly build: Habit Garden — Screen 45 |
+| `aefb4f4` | 🌙 Nightly build: Skills & Progression System — Screen 44 |
+| `b216f49` | 🌙 Nightly build: API Monitor — Screen 43 |
 
 ## Build Commands
 
@@ -113,23 +109,16 @@ npm run build  # production build
 
 | Night | Screen | Description |
 |-------|--------|-------------|
-| **Jun 5** | **38** | **Day in Review — end-of-day summary: energy, mood, tasks, wins, lessons, gratitude, health metrics, tomorrow's goals, animated pixel sunset footer** |
-| **Jun 4** | **37** | **Workout Tracker — run/gym/hiit sessions, 500km yearly goal, personal records, energy tracking** |
-| **Jun 1** | **36** | **Daily Briefing — morning overview: greeting, commute, tasks, events, goals, habits** |
-| May 31 | 35 | Git Activity — commits, repositories, contribution graph, PR board |
-| May 30 | 34 | Reading Tracker — books, articles, papers, courses with streaks and tags |
-| May 29 | 33 | Sleep & Energy Tracker — weekly bar chart, quality trends, 7-day average |
-| May 28 | 32 | Snippets — code snippet library with search, filters, copy-to-clipboard |
-| May 28 | 31 | Docker — container management with status, stats, logs |
-| May 26 | 31 | Daily Journal — mood, energy, wins, lessons, gratitude |
-| May 24 | 32 | Links — pixel bookmark hub with categories, search, stars |
-| May 22 | 31 | Daily Journal — mood, energy, wins, lessons, gratitude |
-| May 22 | 30 | Monitor — DevOps overview: projects, pipeline, heatmap, PRs |
-| May 21 | 29 | Habits Tracker — streaks, weekly heatmap, daily check-in |
-| May 19 | 28 | Passive Income Tracker — income streams, monthly trend |
-| May 18 | 27 | Focus Timer — Pomodoro with session history |
-| May 18 | 26 | Spending Tracker — pixel expense dashboard |
-| May 16 | 25 | Commute Live — MRT crowd map |
+| **Jun 14** | **49** | **Win Wall — pixel art achievement tracker with featured wins, milestone progress bars, category filters, points system, interactive reaction buttons** |
+| **Jun 13** | **48** | **Week Ahead planner — 7-day grid, goals strip, focus blocks timeline, energy indicators** |
+| **Jun 13** | **45** | **Habit Garden — pixel plant growth tracker with 6 growth stages, watering interaction, animated bloom effects** |
+| **Jun 13** | **44** | **Skills & Progression System — XP/levels, streaks, category filters, skill cards, quests, top skills leaderboard** |
+| **Jun 12** | **43** | **API Monitor — endpoint health, latency sparklines, P99/error rates, uptime gauges, incidents panel** |
+| **Jun 12** | **42** | **Year in Pixels — 365-day pixel grid with color-coded daily mood/workout/happiness/energy** |
+| **Jun 12** | **41** | **Financial Dashboard — income vs spending, budget categories, savings rate gauge** |
+| Jun 5 | 38 | Day in Review — end-of-day summary: energy, mood, tasks, wins, lessons, gratitude |
+| Jun 4 | 37 | Workout Tracker — run/gym/hiit sessions, 500km goal, personal records |
+| Jun 1 | 36 | Daily Briefing — morning overview: greeting, commute, tasks, events, goals, habits |
 
 ## Ideas for Future Builds
 
