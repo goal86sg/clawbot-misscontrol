@@ -811,3 +811,25 @@ export const PixelStar: React.FC<PixelIconProps> = ({ size = 24, className }) =>
     <rect x="14" y="6" width="2" height="4" fill="currentColor" opacity="0.3" />
   </svg>
 );
+
+export const PixelRituals: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    {/* Sun (morning) */}
+    <rect x="2" y="1" width="4" height="4" fill="currentColor" opacity="0.3" />
+    <rect x="3" y="2" width="2" height="2" fill="currentColor" opacity="0.5" />
+    <rect x="1" y="2" width="1" height="1" fill="currentColor" opacity="0.4" />
+    <rect x="5" y="3" width="1" height="1" fill="currentColor" opacity="0.4" />
+    {/* Moon (evening) */}
+    <rect x="9" y="2" width="4" height="4" fill="currentColor" opacity="0.3" />
+    <rect x="10" y="3" width="2" height="2" fill="currentColor" opacity="0.5" />
+    <rect x="12" y="2" width="1" height="1" fill="currentColor" opacity="0.4" />
+    <rect x="13" y="4" width="1" height="1" fill="currentColor" opacity="0.3" />
+    {/* Center line */}
+    <rect x="7" y="3" width="2" height="10" fill="currentColor" opacity="0.1" />
+    {/* Ground */}
+    <rect x="1" y="13" width="14" height="2" fill="currentColor" opacity="0.15" />
+    {/* Checkmarks */}
+    <rect x="3" y="9" width="2" height="2" fill="currentColor" opacity="0.5" />
+    <rect x="11" y="9" width="2" height="2" fill="currentColor" opacity="0.5" />
+  </svg>
+);
