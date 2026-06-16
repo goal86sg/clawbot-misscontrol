@@ -833,3 +833,23 @@ export const PixelRituals: React.FC<PixelIconProps> = ({ size = 24, className })
     <rect x="11" y="9" width="2" height="2" fill="currentColor" opacity="0.5" />
   </svg>
 );
+
+export const PixelMindGarden: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    {/* Lotus center petal */}
+    <rect x="6" y="4" width="4" height="5" fill="currentColor" opacity="0.4" />
+    <rect x="7" y="3" width="2" height="2" fill="currentColor" />
+    {/* Left petal */}
+    <rect x="3" y="7" width="3" height="4" fill="currentColor" opacity="0.35" />
+    <rect x="2" y="8" width="2" height="3" fill="currentColor" opacity="0.25" />
+    {/* Right petal */}
+    <rect x="10" y="7" width="3" height="4" fill="currentColor" opacity="0.35" />
+    <rect x="12" y="8" width="2" height="3" fill="currentColor" opacity="0.25" />
+    {/* Water/base */}
+    <rect x="4" y="11" width="8" height="2" fill="currentColor" opacity="0.15" />
+    <rect x="3" y="13" width="10" height="2" fill="currentColor" opacity="0.1" />
+    {/* Sparkle */}
+    <rect x="13" y="1" width="1" height="1" fill="currentColor" opacity="0.5" />
+    <rect x="14" y="2" width="1" height="1" fill="currentColor" opacity="0.3" />
+  </svg>
+);

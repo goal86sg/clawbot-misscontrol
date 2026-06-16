@@ -51,6 +51,7 @@ import {
   PixelBuilds,
   PixelIncidents,
   PixelApiMonitor,
+  PixelMindGarden,
 } from '@/lib/pixel-icons-extra';
 import { PixelSunset } from '@/lib/pixel-icons';
 import { PixelFinance, PixelSkills } from '@/lib/pixel-icons-extra';
@@ -76,6 +77,7 @@ const navGroups = [
       { href: '/finance', label: 'Finance', icon: PixelFinance },
       { href: '/habits', label: 'Habits', icon: PixelHabits },
       { href: '/rituals', label: 'Rituals', icon: PixelRituals },
+      { href: '/mind-garden', label: 'Mind Garden', icon: PixelMindGarden },
       { href: '/workout', label: 'Workout', icon: PixelDumbbell },
       { href: '/journal', label: 'Journal', icon: PixelJournal },
       { href: '/sleep', label: 'Sleep', icon: PixelSleep },
