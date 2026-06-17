@@ -8,7 +8,7 @@ Pixel art dashboard with 49 screens, Next.js + Tailwind. Desss Lee's personal co
 
 - **Location:** `mission-control/`
 - **Tech:** Next.js 16, TypeScript, Tailwind CSS, pixel art SVG icons
-- **Screens:** 49 (as of June 14, 2026)
+- **Screens:** 52 (as of June 17, 2026)
 - **Version:** v2.13.0
 - **Build:** Clean, all 37 routes static ✓
 
@@ -39,6 +39,7 @@ Pixel art dashboard with 49 screens, Next.js + Tailwind. Desss Lee's personal co
 
 ### Knowledge
 16. Sleep — sleep & energy tracker with weekly bar chart and quality trends
+17. **Time Warp** — 24-hour pixel timeline: minute-by-minute activity blocks, current time indicator, day rating stars, activity breakdown bars, vertical timeline
 17. Reading — books, articles, papers, courses with streaks and tag filtering
 18. Links — bookmark hub with categories, search, starred links, tag cloud
 19. Snippets — code snippet library with search, filters, copy-to-clipboard
@@ -68,7 +69,7 @@ Pixel art dashboard with 49 screens, Next.js + Tailwind. Desss Lee's personal co
 
 | Version | Date | Change |
 |---------|------|--------|
-| v2.22.0 | Jun 14 | 49 screens, Win Wall — pixel art achievement tracker with featured wins, milestone progress bars, category filters, points system, interactive reactions |
+| v2.23.0 | Jun 17 | 52 screens, Time Warp — 24-hour pixel timeline with activity breakdown, day rating, vertical timeline view |
 | v2.21.0 | Jun 13 | 48 screens, Week Ahead planner — 7-day grid, goals, focus blocks, energy tracking |
 | v2.20.0 | Jun 13 | 47 screens, Habit Garden — pixel plant growth tracker with 6 growth stages, watering interaction, animated bloom |
 | v2.19.0 | Jun 13 | 44 screens, Skills & Progression System — XP/levels, streaks, category filters, skill cards, quests, leaderboard |
@@ -81,6 +82,9 @@ Pixel art dashboard with 49 screens, Next.js + Tailwind. Desss Lee's personal co
 
 | Commit | Description |
 |---------|-------------|
+| `d62d17c` | 🌙 Nightly build: Time Warp — Screen 52 |
+| `c6aed78` | 🌙 Nightly build: Mind Garden — Screen 51 |
+| `54fcbc8` | docs: add Rituals nightly report (Screen 50) |
 | `098ba8b` | 🌙 Nightly build: Win Wall — Screen 49 |
 | `db5505c` | 🌙 Nightly build: Week Ahead planner — Screen 48 |
 | `3ec53fe` | docs: add Habit Garden nightly report |
@@ -109,6 +113,7 @@ npm run build  # production build
 
 | Night | Screen | Description |
 |-------|--------|-------------|
+| **Jun 17** | **52** | **Time Warp — 24-hour pixel timeline: minute-by-minute activity blocks, current time indicator, day rating stars, activity breakdown bars, vertical pixel timeline** |
 | **Jun 14** | **49** | **Win Wall — pixel art achievement tracker with featured wins, milestone progress bars, category filters, points system, interactive reaction buttons** |
 | **Jun 13** | **48** | **Week Ahead planner — 7-day grid, goals strip, focus blocks timeline, energy indicators** |
 | **Jun 13** | **45** | **Habit Garden — pixel plant growth tracker with 6 growth stages, watering interaction, animated bloom effects** |
