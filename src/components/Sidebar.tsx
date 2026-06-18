@@ -52,6 +52,7 @@ import {
   PixelIncidents,
   PixelApiMonitor,
   PixelMindGarden,
+  PixelAquarium,
 } from '@/lib/pixel-icons-extra';
 import { PixelSunset } from '@/lib/pixel-icons';
 import { PixelFinance, PixelSkills } from '@/lib/pixel-icons-extra';
@@ -78,6 +79,7 @@ const navGroups = [
       { href: '/habits', label: 'Habits', icon: PixelHabits },
       { href: '/rituals', label: 'Rituals', icon: PixelRituals },
       { href: '/mind-garden', label: 'Mind Garden', icon: PixelMindGarden },
+      { href: '/aquarium', label: 'Aquarium', icon: PixelAquarium },
       { href: '/workout', label: 'Workout', icon: PixelDumbbell },
       { href: '/journal', label: 'Journal', icon: PixelJournal },
       { href: '/sleep', label: 'Sleep', icon: PixelSleep },
@@ -201,7 +203,7 @@ export const Sidebar: React.FC = () => {
             <rect x="3" y="0" width="2" height="8" fill="currentColor" />
             <rect x="6" y="2" width="2" height="4" fill="currentColor" />
           </svg>
-          <span className="text-[9px] text-gray-400">v2.17.0 · 44 screens</span>
+          <span className="text-[9px] text-gray-400">v2.18.0 · 45 screens</span>
         </div>
       </div>
     </aside>

@@ -853,3 +853,29 @@ export const PixelMindGarden: React.FC<PixelIconProps> = ({ size = 24, className
     <rect x="14" y="2" width="1" height="1" fill="currentColor" opacity="0.3" />
   </svg>
 );
+
+export const PixelAquarium: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    {/* Glass tank */}
+    <rect x="2" y="2" width="12" height="12" fill="currentColor" opacity="0.05" />
+    <rect x="2" y="2" width="12" height="1" fill="currentColor" opacity="0.2" />
+    <rect x="2" y="13" width="12" height="1" fill="currentColor" opacity="0.2" />
+    <rect x="2" y="2" width="1" height="12" fill="currentColor" opacity="0.2" />
+    <rect x="13" y="2" width="1" height="12" fill="currentColor" opacity="0.2" />
+    {/* Fish */}
+    <rect x="4" y="7" width="5" height="2" fill="currentColor" opacity="0.6" />
+    <rect x="3" y="7" width="1" height="1" fill="currentColor" opacity="0.4" />
+    <rect x="9" y="6" width="1" height="1" fill="currentColor" opacity="0.3" />
+    <rect x="9" y="8" width="1" height="1" fill="currentColor" opacity="0.3" />
+    <rect x="5" y="6" width="1" height="1" fill="currentColor" opacity="0.3" />
+    <rect x="5" y="9" width="1" height="1" fill="currentColor" opacity="0.3" />
+    {/* Bubbles */}
+    <rect x="6" y="4" width="2" height="2" fill="currentColor" opacity="0.15" />
+    <rect x="8" y="3" width="1" height="1" fill="currentColor" opacity="0.1" />
+    {/* Seaweed */}
+    <rect x="4" y="11" width="1" height="3" fill="currentColor" opacity="0.3" />
+    <rect x="5" y="10" width="1" height="1" fill="currentColor" opacity="0.2" />
+    <rect x="11" y="11" width="1" height="3" fill="currentColor" opacity="0.3" />
+    <rect x="10" y="10" width="1" height="1" fill="currentColor" opacity="0.2" />
+  </svg>
+);
