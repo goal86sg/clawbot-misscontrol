@@ -2,14 +2,14 @@
 
 ## Overview
 
-Pixel art dashboard with 49 screens, Next.js + Tailwind. Desss Lee's personal command center.
+Pixel art dashboard with 54 screens, Next.js + Tailwind. Desss Lee's personal command center.
 
 ## Details
 
 - **Location:** `mission-control/`
 - **Tech:** Next.js 16, TypeScript, Tailwind CSS, pixel art SVG icons
-- **Screens:** 52 (as of June 17, 2026)
-- **Version:** v2.13.0
+- **Screens:** 54 (as of June 18, 2026)
+- **Version:** v2.19.0
 - **Build:** Clean, all 37 routes static ✓
 
 ## Screens (38 total)
