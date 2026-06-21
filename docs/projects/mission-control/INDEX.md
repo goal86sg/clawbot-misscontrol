@@ -2,13 +2,13 @@
 
 ## Overview
 
-Pixel art dashboard with 54 screens, Next.js + Tailwind. Desss Lee's personal command center.
+Pixel art dashboard with 55 screens, Next.js + Tailwind. Desss Lee's personal command center.
 
 ## Details
 
 - **Location:** `mission-control/`
 - **Tech:** Next.js 16, TypeScript, Tailwind CSS, pixel art SVG icons
-- **Screens:** 54 (as of June 18, 2026)
+- **Screens:** 55 (as of June 21, 2026)
 - **Version:** v2.19.0
 - **Build:** Clean, all 37 routes static ✓
 
@@ -82,6 +82,7 @@ Pixel art dashboard with 54 screens, Next.js + Tailwind. Desss Lee's personal co
 
 | Commit | Description |
 |---------|-------------|
+| `53f8488` | 🌙 Nightly build: Pixel Campfire — Screen 58 |
 | `d62d17c` | 🌙 Nightly build: Time Warp — Screen 52 |
 | `c6aed78` | 🌙 Nightly build: Mind Garden — Screen 51 |
 | `54fcbc8` | docs: add Rituals nightly report (Screen 50) |
