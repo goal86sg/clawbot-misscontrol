@@ -879,3 +879,24 @@ export const PixelAquarium: React.FC<PixelIconProps> = ({ size = 24, className }
     <rect x="10" y="10" width="1" height="1" fill="currentColor" opacity="0.2" />
   </svg>
 );
+
+export const PixelWinWall: React.FC<PixelIconProps> = ({ size = 24, className }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" className={className} shapeRendering="crispEdges">
+    {/* Trophy cup */}
+    <rect x="5" y="2" width="6" height="1" fill="currentColor" />
+    <rect x="4" y="3" width="8" height="1" fill="currentColor" opacity="0.8" />
+    <rect x="3" y="4" width="10" height="5" fill="currentColor" />
+    <rect x="4" y="9" width="8" height="2" fill="currentColor" opacity="0.6" />
+    {/* Trophy handles */}
+    <rect x="1" y="4" width="2" height="3" fill="currentColor" opacity="0.4" />
+    <rect x="13" y="4" width="2" height="3" fill="currentColor" opacity="0.4" />
+    {/* Trophy stem */}
+    <rect x="6" y="11" width="4" height="2" fill="currentColor" opacity="0.5" />
+    <rect x="5" y="13" width="6" height="1" fill="currentColor" opacity="0.4" />
+    {/* Star on cup */}
+    <rect x="7" y="5" width="2" height="1" fill="white" opacity="0.4" />
+    <rect x="6" y="6" width="4" height="1" fill="white" opacity="0.3" />
+    <rect x="6" y="7" width="1" height="1" fill="white" opacity="0.2" />
+    <rect x="9" y="7" width="1" height="1" fill="white" opacity="0.2" />
+  </svg>
+);
