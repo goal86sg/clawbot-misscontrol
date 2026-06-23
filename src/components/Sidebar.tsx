@@ -205,7 +205,7 @@ export const Sidebar: React.FC = () => {
             <rect x="3" y="0" width="2" height="8" fill="currentColor" />
             <rect x="6" y="2" width="2" height="4" fill="currentColor" />
           </svg>
-          <span className="text-[9px] text-gray-400">v2.18.0 · 45 screens</span>
+          <span className="text-[9px] text-gray-400">v2.32.0 · 59 screens</span>
         </div>
       </div>
     </aside>
