@@ -74,6 +74,95 @@ function PixelSunSmall({ size = 12 }: { size?: number }) {
   );
 }
 
+// ─── Pixel Weather Icons ────────────────────────────────────────────────────────
+
+function PixelSunWeather({ size = 16 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 8 8" className="text-yellow-400" shapeRendering="crispEdges">
+      <rect x="3" y="1" width="2" height="2" fill="currentColor" />
+      <rect x="2" y="0" width="1" height="1" fill="currentColor" opacity="0.5" />
+      <rect x="5" y="0" width="1" height="1" fill="currentColor" opacity="0.5" />
+      <rect x="1" y="3" width="1" height="2" fill="currentColor" opacity="0.5" />
+      <rect x="6" y="3" width="1" height="2" fill="currentColor" opacity="0.5" />
+      <rect x="2" y="6" width="1" height="1" fill="currentColor" opacity="0.5" />
+      <rect x="5" y="6" width="1" height="1" fill="currentColor" opacity="0.5" />
+      <rect x="2" y="2" width="4" height="4" fill="currentColor" opacity="0.3" />
+    </svg>
+  );
+}
+
+function PixelCloudWeather({ size = 16 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 8 8" className="text-gray-300" shapeRendering="crispEdges">
+      <rect x="1" y="4" width="6" height="2" fill="currentColor" />
+      <rect x="2" y="3" width="4" height="2" fill="currentColor" />
+      <rect x="3" y="2" width="2" height="2" fill="currentColor" />
+      <rect x="0" y="5" width="1" height="1" fill="currentColor" opacity="0.5" />
+      <rect x="7" y="5" width="1" height="1" fill="currentColor" opacity="0.5" />
+    </svg>
+  );
+}
+
+function PixelRain({ size = 16 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 8 8" shapeRendering="crispEdges">
+      <rect x="1" y="2" width="6" height="2" fill="#94a3b8" opacity="0.9" />
+      <rect x="2" y="1" width="4" height="2" fill="#94a3b8" />
+      <rect x="3" y="0" width="2" height="2" fill="#94a3b8" opacity="0.6" />
+      <rect x="1" y="5" width="1" height="2" fill="#60a5fa" opacity="0.8" />
+      <rect x="3" y="6" width="1" height="2" fill="#60a5fa" opacity="0.6" />
+      <rect x="5" y="5" width="1" height="2" fill="#60a5fa" opacity="0.7" />
+    </svg>
+  );
+}
+
+function PixelStorm({ size = 16 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 8 8" shapeRendering="crispEdges">
+      <rect x="1" y="2" width="6" height="2" fill="#64748b" opacity="0.9" />
+      <rect x="2" y="1" width="4" height="2" fill="#64748b" />
+      <rect x="3" y="0" width="2" height="2" fill="#64748b" opacity="0.6" />
+      <rect x="3" y="4" width="2" height="2" fill="#fbbf24" />
+      <rect x="3" y="6" width="1" height="1" fill="#fbbf24" opacity="0.5" />
+      <rect x="1" y="5" width="1" height="2" fill="#60a5fa" opacity="0.6" />
+      <rect x="6" y="5" width="1" height="2" fill="#60a5fa" opacity="0.6" />
+    </svg>
+  );
+}
+
+function PixelPartCloud({ size = 16 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 8 8" shapeRendering="crispEdges">
+      <rect x="3" y="0" width="2" height="2" fill="#fbbf24" opacity="0.8" />
+      <rect x="4" y="1" width="1" height="1" fill="#fbbf24" opacity="0.5" />
+      <rect x="1" y="3" width="6" height="2" fill="#cbd5e1" opacity="0.9" />
+      <rect x="2" y="2" width="4" height="2" fill="#cbd5e1" />
+      <rect x="3" y="1" width="2" height="2" fill="#cbd5e1" opacity="0.6" />
+      <rect x="0" y="4" width="1" height="1" fill="#cbd5e1" opacity="0.5" />
+    </svg>
+  );
+}
+
+type WeatherType = 'sunny' | 'partly-cloudy' | 'cloudy' | 'rainy' | 'stormy';
+
+function WeatherIcon({ type, size = 14 }: { type: WeatherType; size?: number }) {
+  switch (type) {
+    case 'sunny':          return <PixelSunWeather size={size} />;
+    case 'partly-cloudy': return <PixelPartCloud size={size} />;
+    case 'cloudy':        return <PixelCloudWeather size={size} />;
+    case 'rainy':         return <PixelRain size={size} />;
+    case 'stormy':        return <PixelStorm size={size} />;
+  }
+}
+
+const WEATHER_COLORS: Record<WeatherType, string> = {
+  'sunny':          'text-yellow-400',
+  'partly-cloudy': 'text-amber-400',
+  'cloudy':        'text-gray-300',
+  'rainy':         'text-blue-300',
+  'stormy':        'text-slate-400',
+};
+
 // ─── Types ────────────────────────────────────────────────────────────────────
 
 interface WeekGoal {
@@ -92,6 +181,9 @@ interface DayPlan {
   dayNum: number;
   label: string;
   theme: string;
+  weather: WeatherType;
+  temp: number;
+  rainChance: number;
   tasks: { id: string; text: string; done: boolean; type: 'task' | 'meeting' | 'focus' }[];
   energy: 1 | 2 | 3;
   notes: string;
@@ -127,6 +219,10 @@ function getWeekDays(baseDate: Date = new Date()): DayPlan[] {
   ];
   const energyLevels: (1 | 2 | 3)[] = [3, 2, 2, 3, 2, 1, 1];
 
+  const weatherTypes: WeatherType[] = ['sunny', 'partly-cloudy', 'rainy', 'cloudy', 'sunny', 'partly-cloudy', 'cloudy'];
+  const temps: number[] = [31, 30, 27, 28, 31, 29, 27];
+  const rainPct: number[] = [10, 30, 80, 60, 5, 45, 55];
+
   return Array.from({ length: 7 }, (_, i) => {
     const d = new Date(monday);
     d.setDate(d.getDate() + i);
@@ -137,6 +233,9 @@ function getWeekDays(baseDate: Date = new Date()): DayPlan[] {
       dayNum: d.getDate(),
       label: isToday ? `${labels[i]} · Today` : labels[i],
       theme: themes[i],
+      weather: weatherTypes[i],
+      temp: temps[i],
+      rainChance: rainPct[i],
       tasks: [
         { id: `t${i}a`, text: 'Morning review & priorities', done: false, type: 'task' as const },
         { id: `t${i}b`, text: 'Inbox zero', done: false, type: 'task' as const },
@@ -453,6 +552,35 @@ export default function WeekAheadPage() {
               {day.highlight && (
                 <div className="text-[8px] text-violet-500 font-semibold mt-1 uppercase tracking-wider">Today</div>
               )}
+              {/* Weather strip */}
+              <div className="mt-2 pt-2 border-t border-gray-100">
+                <div className="flex items-center justify-center gap-1">
+                  <WeatherIcon type={day.weather} size={12} />
+                  <span className={`text-[10px] font-bold ${WEATHER_COLORS[day.weather]}`}>
+                    {day.temp}°
+                  </span>
+                </div>
+                {/* Rain chance bar */}
+                <div className="mt-0.5 mx-1 h-1 rounded-full bg-gray-100 overflow-hidden">
+                  <div
+                    className={`h-full rounded-full ${
+                      day.rainChance > 70 ? 'bg-blue-400' :
+                      day.rainChance > 40 ? 'bg-sky-300' :
+                      'bg-slate-200'
+                    }`}
+                    style={{ width: `${day.rainChance}%` }}
+                  />
+                </div>
+                <div className="flex items-center justify-center gap-0.5 mt-0.5">
+                  <span className={`text-[8px] font-mono ${
+                    day.rainChance > 70 ? 'text-blue-500' :
+                    day.rainChance > 40 ? 'text-sky-400' :
+                    'text-gray-400'
+                  }`}>
+                    {day.rainChance > 70 ? '💧' : day.rainChance > 40 ? '💦' : '✨'} {day.rainChance}%
+                  </span>
+                </div>
+              </div>
             </div>
           ))}
         </div>
